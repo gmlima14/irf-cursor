@@ -1,0 +1,432 @@
+2025-06-26 10:11:41,555:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-26 10:11:41,555:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-26 10:11:41,556:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-26 10:11:41,556:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-26 10:50:56,839:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-26 10:50:56,839:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-26 10:50:56,839:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-26 10:50:56,839:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-26 10:51:55,047:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-26 10:51:55,047:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-26 10:51:55,053:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-26 10:51:55,053:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 14:08:07,965:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 14:08:07,966:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 14:08:07,966:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 14:08:07,967:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 14:10:50,067:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 14:10:50,067:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 14:10:50,068:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 14:10:50,068:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 14:11:39,034:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 14:11:39,034:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 14:11:39,035:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 14:11:39,035:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 14:12:12,992:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 14:12:12,992:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 14:12:12,993:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 14:12:12,993:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 14:12:23,909:INFO:Initializing load_model()
+2025-06-27 14:12:23,909:INFO:load_model(model_name=/content/drive/MyDrive/IRF - Indice de Risco de Fornecedor/modelo_treinado_alldates, platform=None, authentication=None, verbose=True)
+2025-06-27 14:43:18,999:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 14:43:19,002:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 14:43:19,002:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 14:43:19,003:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 14:43:53,047:INFO:Initializing load_model()
+2025-06-27 14:43:53,047:INFO:load_model(model_name=/content/drive/MyDrive/IRF - Indice de Risco de Fornecedor/modelo_treinado_alldates, platform=None, authentication=None, verbose=True)
+2025-06-27 14:49:00,647:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 14:49:00,649:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 14:49:00,649:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 14:49:00,650:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 14:49:39,166:INFO:Initializing load_model()
+2025-06-27 14:49:39,167:INFO:load_model(model_name=/content/drive/MyDrive/IRF - Indice de Risco de Fornecedor/modelo_treinado_alldates, platform=None, authentication=None, verbose=True)
+2025-06-27 14:57:30,806:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 14:57:30,807:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 14:57:30,807:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 14:57:30,808:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 14:58:08,430:INFO:Initializing load_model()
+2025-06-27 14:58:08,431:INFO:load_model(model_name=S:\Procurement\FUP\IRF - Índice de Risco de Fornecedores\Modelo de Machine Learning\modelo_treinado_alldates.pkl, platform=None, authentication=None, verbose=True)
+2025-06-27 15:10:03,007:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 15:10:03,008:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 15:10:03,008:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 15:10:03,008:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 15:11:45,785:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 15:11:45,786:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 15:11:45,786:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 15:11:45,787:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 15:12:28,262:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 15:12:28,263:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 15:12:28,264:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 15:12:28,265:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 15:13:04,106:INFO:Initializing load_model()
+2025-06-27 15:13:04,107:INFO:load_model(model_name=modelo_treinado_alldates.pkl, platform=None, authentication=None, verbose=True)
+2025-06-27 15:14:01,384:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 15:14:01,385:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 15:14:01,386:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 15:14:01,387:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 15:14:44,185:INFO:Initializing load_model()
+2025-06-27 15:14:44,187:INFO:load_model(model_name=modelo_treinado_alldates, platform=None, authentication=None, verbose=True)
+2025-06-27 15:14:47,703:INFO:Initializing predict_model()
+2025-06-27 15:14:47,704:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000002302355E1D0>, estimator=Pipeline(memory=Memory(location=None),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['NetOrderValue', 'MesPedido',
+                                             'IdadePedido', 'DiasParaEntrega',
+                                             'carga_fornecedor'],
+                                    transformer=SimpleImputer())),
+                ('categorical_imputer',
+                 TransformerWrapper(include=['MATKL', 'Vendor'],
+                                    transformer=SimpleImputer(strategy='most_frequent'))),
+                ('rest_encoding',
+                 Transf...per(include=['MATKL', 'Vendor'],
+                                    transformer=TargetEncoder(cols=['MATKL',
+                                                                    'Vendor'],
+                                                              handle_missing='return_nan'))),
+                ('balance',
+                 TransformerWrapper(transformer=FixImbalancer(estimator=SMOTE(random_state=109)))),
+                ('clean_column_names',
+                 TransformerWrapper(transformer=CleanColumnNames())),
+                ('actual_estimator',
+                 ExtraTreesClassifier(n_jobs=-1, random_state=109))]), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x0000023022055300>)
+2025-06-27 15:14:47,705:INFO:Checking exceptions
+2025-06-27 15:14:47,706:INFO:Preloading libraries
+2025-06-27 15:14:47,712:INFO:Set up data.
+2025-06-27 15:14:48,504:INFO:Set up index.
+2025-06-27 15:30:00,462:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 15:30:00,467:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 15:30:00,469:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 15:30:00,469:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 15:35:02,600:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 15:35:02,602:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 15:35:02,603:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 15:35:02,604:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 15:35:09,134:INFO:Initializing load_model()
+2025-06-27 15:35:09,135:INFO:load_model(model_name=modelo_treinado_alldates, platform=None, authentication=None, verbose=True)
+2025-06-27 15:35:13,418:INFO:Initializing predict_model()
+2025-06-27 15:35:13,419:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000002231E6C3CD0>, estimator=Pipeline(memory=Memory(location=None),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['NetOrderValue', 'MesPedido',
+                                             'IdadePedido', 'DiasParaEntrega',
+                                             'carga_fornecedor'],
+                                    transformer=SimpleImputer())),
+                ('categorical_imputer',
+                 TransformerWrapper(include=['MATKL', 'Vendor'],
+                                    transformer=SimpleImputer(strategy='most_frequent'))),
+                ('rest_encoding',
+                 Transf...per(include=['MATKL', 'Vendor'],
+                                    transformer=TargetEncoder(cols=['MATKL',
+                                                                    'Vendor'],
+                                                              handle_missing='return_nan'))),
+                ('balance',
+                 TransformerWrapper(transformer=FixImbalancer(estimator=SMOTE(random_state=109)))),
+                ('clean_column_names',
+                 TransformerWrapper(transformer=CleanColumnNames())),
+                ('actual_estimator',
+                 ExtraTreesClassifier(n_jobs=-1, random_state=109))]), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x000002231E820040>)
+2025-06-27 15:35:13,421:INFO:Checking exceptions
+2025-06-27 15:35:13,422:INFO:Preloading libraries
+2025-06-27 15:35:13,427:INFO:Set up data.
+2025-06-27 15:35:13,483:INFO:Set up index.
+2025-06-27 15:35:54,196:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 15:35:54,197:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 15:35:54,198:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 15:35:54,199:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 15:36:30,783:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 15:36:30,787:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 15:36:30,789:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 15:36:30,792:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 15:36:37,375:INFO:Initializing load_model()
+2025-06-27 15:36:37,377:INFO:load_model(model_name=modelo_treinado_alldates.pkl, platform=None, authentication=None, verbose=True)
+2025-06-27 15:39:39,144:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 15:39:39,145:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 15:39:39,147:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 15:39:39,149:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 15:39:43,488:INFO:Initializing load_model()
+2025-06-27 15:39:43,490:INFO:load_model(model_name=modelo_treinado_alldates, platform=None, authentication=None, verbose=True)
+2025-06-27 15:39:46,285:INFO:Initializing predict_model()
+2025-06-27 15:39:46,286:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000022D8E682350>, estimator=Pipeline(memory=Memory(location=None),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['NetOrderValue', 'MesPedido',
+                                             'IdadePedido', 'DiasParaEntrega',
+                                             'carga_fornecedor'],
+                                    transformer=SimpleImputer())),
+                ('categorical_imputer',
+                 TransformerWrapper(include=['MATKL', 'Vendor'],
+                                    transformer=SimpleImputer(strategy='most_frequent'))),
+                ('rest_encoding',
+                 Transf...per(include=['MATKL', 'Vendor'],
+                                    transformer=TargetEncoder(cols=['MATKL',
+                                                                    'Vendor'],
+                                                              handle_missing='return_nan'))),
+                ('balance',
+                 TransformerWrapper(transformer=FixImbalancer(estimator=SMOTE(random_state=109)))),
+                ('clean_column_names',
+                 TransformerWrapper(transformer=CleanColumnNames())),
+                ('actual_estimator',
+                 ExtraTreesClassifier(n_jobs=-1, random_state=109))]), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x0000022D8EB0B740>)
+2025-06-27 15:39:46,287:INFO:Checking exceptions
+2025-06-27 15:39:46,287:INFO:Preloading libraries
+2025-06-27 15:39:46,298:INFO:Set up data.
+2025-06-27 15:39:46,369:INFO:Set up index.
+2025-06-27 15:48:22,741:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 15:48:22,743:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 15:48:22,744:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 15:48:22,744:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 15:53:59,382:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 15:53:59,384:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 15:53:59,385:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 15:53:59,385:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 16:14:20,935:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 16:14:20,935:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 16:14:20,935:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 16:14:20,935:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 16:17:47,839:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 16:17:47,839:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 16:17:47,847:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 16:17:47,847:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 16:18:40,849:INFO:Initializing load_model()
+2025-06-27 16:18:40,849:INFO:load_model(model_name=S:\Procurement\FUP\IRF - Índice de Risco de Fornecedores\Modelo de Machine Learning\modelo_treinado_alldates.pkl, platform=None, authentication=None, verbose=True)
+2025-06-27 16:19:28,618:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 16:19:28,618:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 16:19:28,618:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 16:19:28,619:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 16:19:53,283:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 16:19:53,283:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 16:19:53,287:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 16:19:53,287:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 16:20:22,128:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 16:20:22,132:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 16:20:22,133:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 16:20:22,135:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 16:22:09,708:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 16:22:09,715:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 16:22:09,716:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 16:22:09,716:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 16:24:30,644:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 16:24:30,645:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 16:24:30,646:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 16:24:30,646:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 16:25:27,003:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 16:25:27,004:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 16:25:27,004:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 16:25:27,004:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 16:27:35,765:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 16:27:35,765:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 16:27:35,765:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 16:27:35,765:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 16:28:15,696:INFO:Initializing load_model()
+2025-06-27 16:28:15,702:INFO:load_model(model_name=S:\Procurement\FUP\IRF - Índice de Risco de Fornecedores\Modelo de Machine Learning\modelo_treinado_alldates, platform=None, authentication=None, verbose=True)
+2025-06-27 16:28:45,532:INFO:Initializing predict_model()
+2025-06-27 16:28:45,533:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001F30D36C090>, estimator=Pipeline(memory=Memory(location=None),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['NetOrderValue', 'MesPedido',
+                                             'IdadePedido', 'DiasParaEntrega',
+                                             'carga_fornecedor'],
+                                    transformer=SimpleImputer())),
+                ('categorical_imputer',
+                 TransformerWrapper(include=['MATKL', 'Vendor'],
+                                    transformer=SimpleImputer(strategy='most_frequent'))),
+                ('rest_encoding',
+                 Transf...per(include=['MATKL', 'Vendor'],
+                                    transformer=TargetEncoder(cols=['MATKL',
+                                                                    'Vendor'],
+                                                              handle_missing='return_nan'))),
+                ('balance',
+                 TransformerWrapper(transformer=FixImbalancer(estimator=SMOTE(random_state=109)))),
+                ('clean_column_names',
+                 TransformerWrapper(transformer=CleanColumnNames())),
+                ('actual_estimator',
+                 ExtraTreesClassifier(n_jobs=-1, random_state=109))]), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x000001F30D8E6480>)
+2025-06-27 16:28:45,535:INFO:Checking exceptions
+2025-06-27 16:28:45,535:INFO:Preloading libraries
+2025-06-27 16:28:45,536:INFO:Set up data.
+2025-06-27 16:28:45,896:INFO:Set up index.
+2025-06-27 16:45:17,168:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 16:45:17,168:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 16:45:17,171:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 16:45:17,172:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 16:46:33,553:INFO:Initializing load_model()
+2025-06-27 16:46:33,554:INFO:load_model(model_name=S:\Procurement\FUP\IRF - Índice de Risco de Fornecedores\Modelo de Machine Learning\modelo_treinado_alldates, platform=None, authentication=None, verbose=True)
+2025-06-27 16:47:07,419:INFO:Initializing predict_model()
+2025-06-27 16:47:07,419:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x00000269E1630610>, estimator=Pipeline(memory=Memory(location=None),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['NetOrderValue', 'MesPedido',
+                                             'IdadePedido', 'DiasParaEntrega',
+                                             'carga_fornecedor'],
+                                    transformer=SimpleImputer())),
+                ('categorical_imputer',
+                 TransformerWrapper(include=['MATKL', 'Vendor'],
+                                    transformer=SimpleImputer(strategy='most_frequent'))),
+                ('rest_encoding',
+                 Transf...per(include=['MATKL', 'Vendor'],
+                                    transformer=TargetEncoder(cols=['MATKL',
+                                                                    'Vendor'],
+                                                              handle_missing='return_nan'))),
+                ('balance',
+                 TransformerWrapper(transformer=FixImbalancer(estimator=SMOTE(random_state=109)))),
+                ('clean_column_names',
+                 TransformerWrapper(transformer=CleanColumnNames())),
+                ('actual_estimator',
+                 ExtraTreesClassifier(n_jobs=-1, random_state=109))]), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x00000269DFAFDD00>)
+2025-06-27 16:47:07,419:INFO:Checking exceptions
+2025-06-27 16:47:07,420:INFO:Preloading libraries
+2025-06-27 16:47:07,427:INFO:Set up data.
+2025-06-27 16:47:07,533:INFO:Set up index.
+2025-06-27 16:48:50,431:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 16:48:50,431:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 16:48:50,431:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 16:48:50,431:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-06-27 16:49:53,711:INFO:Initializing load_model()
+2025-06-27 16:49:53,711:INFO:load_model(model_name=S:\Procurement\FUP\IRF - Índice de Risco de Fornecedores\Modelo de Machine Learning\modelo_treinado_alldates, platform=None, authentication=None, verbose=True)
+2025-06-27 16:50:24,093:INFO:Initializing predict_model()
+2025-06-27 16:50:24,093:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000002037B866910>, estimator=Pipeline(memory=Memory(location=None),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['NetOrderValue', 'MesPedido',
+                                             'IdadePedido', 'DiasParaEntrega',
+                                             'carga_fornecedor'],
+                                    transformer=SimpleImputer())),
+                ('categorical_imputer',
+                 TransformerWrapper(include=['MATKL', 'Vendor'],
+                                    transformer=SimpleImputer(strategy='most_frequent'))),
+                ('rest_encoding',
+                 Transf...per(include=['MATKL', 'Vendor'],
+                                    transformer=TargetEncoder(cols=['MATKL',
+                                                                    'Vendor'],
+                                                              handle_missing='return_nan'))),
+                ('balance',
+                 TransformerWrapper(transformer=FixImbalancer(estimator=SMOTE(random_state=109)))),
+                ('clean_column_names',
+                 TransformerWrapper(transformer=CleanColumnNames())),
+                ('actual_estimator',
+                 ExtraTreesClassifier(n_jobs=-1, random_state=109))]), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x0000020379E79D00>)
+2025-06-27 16:50:24,093:INFO:Checking exceptions
+2025-06-27 16:50:24,093:INFO:Preloading libraries
+2025-06-27 16:50:24,099:INFO:Set up data.
+2025-06-27 16:50:24,149:INFO:Set up index.
