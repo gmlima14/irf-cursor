@@ -1648,3 +1648,1635 @@ Alternately, you can install this by running `pip install pycaret[models]`
                      oob_score=False, random_state=109, verbose=0,
                      warm_start=False)
 2025-07-07 16:25:26,960:INFO:create_model() successfully completed......................................
+2025-07-08 10:18:43,689:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-07-08 10:18:43,689:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-07-08 10:18:43,699:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-07-08 10:18:43,699:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-07-08 10:19:42,489:INFO:Initializing load_model()
+2025-07-08 10:19:42,490:INFO:load_model(model_name=S:\Procurement\FUP\IRF - Índice de Risco de Fornecedores\Modelo de Machine Learning\modelo_treinado_teste_carga_fornecedor, platform=None, authentication=None, verbose=True)
+2025-07-08 10:20:29,911:INFO:Initializing predict_model()
+2025-07-08 10:20:29,911:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000028B60ABAED0>, estimator=Pipeline(memory=Memory(location=None),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['NetOrderValue', 'MesPedido',
+                                             'IdadePedido', 'DiasParaEntrega',
+                                             'carga_fornecedor'],
+                                    transformer=SimpleImputer())),
+                ('categorical_imputer',
+                 TransformerWrapper(include=['MATKL', 'Vendor'],
+                                    transformer=SimpleImputer(strategy='most_frequent'))),
+                ('rest_encoding',
+                 Transf...per(include=['MATKL', 'Vendor'],
+                                    transformer=TargetEncoder(cols=['MATKL',
+                                                                    'Vendor'],
+                                                              handle_missing='return_nan'))),
+                ('balance',
+                 TransformerWrapper(transformer=FixImbalancer(estimator=SMOTE(random_state=109)))),
+                ('clean_column_names',
+                 TransformerWrapper(transformer=CleanColumnNames())),
+                ('actual_estimator',
+                 ExtraTreesClassifier(n_jobs=-1, random_state=109))]), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x0000028B6068A520>)
+2025-07-08 10:20:29,911:INFO:Checking exceptions
+2025-07-08 10:20:29,916:INFO:Preloading libraries
+2025-07-08 10:20:29,917:INFO:Set up data.
+2025-07-08 10:20:29,932:INFO:Set up index.
+2025-07-08 10:30:14,441:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-07-08 10:30:14,441:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-07-08 10:30:14,441:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-07-08 10:30:14,441:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-07-08 10:30:48,797:INFO:Initializing load_model()
+2025-07-08 10:30:48,797:INFO:load_model(model_name=S:\Procurement\FUP\IRF - Índice de Risco de Fornecedores\Modelo de Machine Learning\modelo_treinado_teste_carga_fornecedor, platform=None, authentication=None, verbose=True)
+2025-07-08 10:32:22,033:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-07-08 10:32:22,033:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-07-08 10:32:22,033:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-07-08 10:32:22,033:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-07-08 10:32:54,107:INFO:Initializing load_model()
+2025-07-08 10:32:54,108:INFO:load_model(model_name=S:\Procurement\FUP\IRF - Índice de Risco de Fornecedores\Modelo de Machine Learning\modelo_treinado_teste_carga_fornecedor, platform=None, authentication=None, verbose=True)
+2025-07-08 10:33:33,879:INFO:Initializing predict_model()
+2025-07-08 10:33:33,879:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000002BEB8BCE150>, estimator=Pipeline(memory=Memory(location=None),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['NetOrderValue', 'MesPedido',
+                                             'IdadePedido', 'DiasParaEntrega',
+                                             'carga_fornecedor'],
+                                    transformer=SimpleImputer())),
+                ('categorical_imputer',
+                 TransformerWrapper(include=['MATKL', 'Vendor'],
+                                    transformer=SimpleImputer(strategy='most_frequent'))),
+                ('rest_encoding',
+                 Transf...per(include=['MATKL', 'Vendor'],
+                                    transformer=TargetEncoder(cols=['MATKL',
+                                                                    'Vendor'],
+                                                              handle_missing='return_nan'))),
+                ('balance',
+                 TransformerWrapper(transformer=FixImbalancer(estimator=SMOTE(random_state=109)))),
+                ('clean_column_names',
+                 TransformerWrapper(transformer=CleanColumnNames())),
+                ('actual_estimator',
+                 ExtraTreesClassifier(n_jobs=-1, random_state=109))]), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x000002BEB884E520>)
+2025-07-08 10:33:33,879:INFO:Checking exceptions
+2025-07-08 10:33:33,879:INFO:Preloading libraries
+2025-07-08 10:33:33,879:INFO:Set up data.
+2025-07-08 10:33:33,895:INFO:Set up index.
+2025-07-08 10:53:06,098:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-07-08 10:53:06,098:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-07-08 10:53:06,098:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-07-08 10:53:06,106:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-07-08 10:53:39,104:INFO:Initializing load_model()
+2025-07-08 10:53:39,104:INFO:load_model(model_name=S:\Procurement\FUP\IRF - Índice de Risco de Fornecedores\Modelo de Machine Learning\modelo_treinado_teste_carga_fornecedor, platform=None, authentication=None, verbose=True)
+2025-07-08 10:54:19,394:INFO:Initializing predict_model()
+2025-07-08 10:54:19,394:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000002C3658FD010>, estimator=Pipeline(memory=Memory(location=None),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['NetOrderValue', 'MesPedido',
+                                             'IdadePedido', 'DiasParaEntrega',
+                                             'carga_fornecedor'],
+                                    transformer=SimpleImputer())),
+                ('categorical_imputer',
+                 TransformerWrapper(include=['MATKL', 'Vendor'],
+                                    transformer=SimpleImputer(strategy='most_frequent'))),
+                ('rest_encoding',
+                 Transf...per(include=['MATKL', 'Vendor'],
+                                    transformer=TargetEncoder(cols=['MATKL',
+                                                                    'Vendor'],
+                                                              handle_missing='return_nan'))),
+                ('balance',
+                 TransformerWrapper(transformer=FixImbalancer(estimator=SMOTE(random_state=109)))),
+                ('clean_column_names',
+                 TransformerWrapper(transformer=CleanColumnNames())),
+                ('actual_estimator',
+                 ExtraTreesClassifier(n_jobs=-1, random_state=109))]), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x000002C3655BE520>)
+2025-07-08 10:54:19,394:INFO:Checking exceptions
+2025-07-08 10:54:19,394:INFO:Preloading libraries
+2025-07-08 10:54:19,396:INFO:Set up data.
+2025-07-08 10:54:19,413:INFO:Set up index.
+2025-07-08 11:07:53,622:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-07-08 11:07:53,624:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-07-08 11:07:53,624:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-07-08 11:07:53,626:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-07-08 11:08:29,616:INFO:Initializing load_model()
+2025-07-08 11:08:29,616:INFO:load_model(model_name=S:\Procurement\FUP\IRF - Índice de Risco de Fornecedores\Modelo de Machine Learning\modelo_treinado_teste_carga_fornecedor, platform=None, authentication=None, verbose=True)
+2025-07-08 11:09:02,857:INFO:Initializing predict_model()
+2025-07-08 11:09:02,858:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x00000274FB58D610>, estimator=Pipeline(memory=Memory(location=None),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['NetOrderValue', 'MesPedido',
+                                             'IdadePedido', 'DiasParaEntrega',
+                                             'carga_fornecedor'],
+                                    transformer=SimpleImputer())),
+                ('categorical_imputer',
+                 TransformerWrapper(include=['MATKL', 'Vendor'],
+                                    transformer=SimpleImputer(strategy='most_frequent'))),
+                ('rest_encoding',
+                 Transf...per(include=['MATKL', 'Vendor'],
+                                    transformer=TargetEncoder(cols=['MATKL',
+                                                                    'Vendor'],
+                                                              handle_missing='return_nan'))),
+                ('balance',
+                 TransformerWrapper(transformer=FixImbalancer(estimator=SMOTE(random_state=109)))),
+                ('clean_column_names',
+                 TransformerWrapper(transformer=CleanColumnNames())),
+                ('actual_estimator',
+                 ExtraTreesClassifier(n_jobs=-1, random_state=109))]), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x00000274FF3DE700>)
+2025-07-08 11:09:02,858:INFO:Checking exceptions
+2025-07-08 11:09:02,859:INFO:Preloading libraries
+2025-07-08 11:09:02,859:INFO:Set up data.
+2025-07-08 11:09:02,875:INFO:Set up index.
+2025-07-08 11:22:31,220:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-07-08 11:22:31,221:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-07-08 11:22:31,221:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-07-08 11:22:31,221:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-07-08 11:23:12,837:WARNING:c:\Users\CSUGAB01\OneDrive - ANDRITZ AG\Documents\Python\IRF - Teste Base OTP\modelo_irf.py:129: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.
+  df_events.groupby('Vendor')['start'].cumsum() - df_events.groupby('Vendor')['end'].cumsum()
+
+2025-07-08 11:23:18,328:INFO:PyCaret ClassificationExperiment
+2025-07-08 11:23:18,328:INFO:Logging name: clf-default-name
+2025-07-08 11:23:18,328:INFO:ML Usecase: MLUsecase.CLASSIFICATION
+2025-07-08 11:23:18,328:INFO:version 3.3.2
+2025-07-08 11:23:18,330:INFO:Initializing setup()
+2025-07-08 11:23:18,330:INFO:self.USI: b2c5
+2025-07-08 11:23:18,330:INFO:self._variable_keys: {'target_param', 'y_train', 'log_plots_param', 'exp_name_log', 'USI', 'y', 'X', 'X_test', 'fold_groups_param', '_ml_usecase', 'X_train', 'fix_imbalance', 'html_param', 'exp_id', 'fold_generator', 'seed', 'n_jobs_param', 'is_multiclass', '_available_plots', 'pipeline', 'gpu_param', 'y_test', 'data', 'logging_param', 'gpu_n_jobs_param', 'memory', 'fold_shuffle_param', 'idx'}
+2025-07-08 11:23:18,331:INFO:Checking environment
+2025-07-08 11:23:18,332:INFO:python_version: 3.11.9
+2025-07-08 11:23:18,332:INFO:python_build: ('tags/v3.11.9:de54cf5', 'Apr  2 2024 10:12:12')
+2025-07-08 11:23:18,332:INFO:machine: AMD64
+2025-07-08 11:23:18,382:INFO:platform: Windows-10-10.0.22631-SP0
+2025-07-08 11:23:18,390:INFO:Memory: svmem(total=16844595200, available=1324314624, percent=92.1, used=15520280576, free=1324314624)
+2025-07-08 11:23:18,390:INFO:Physical Core: 4
+2025-07-08 11:23:18,391:INFO:Logical Core: 8
+2025-07-08 11:23:18,391:INFO:Checking libraries
+2025-07-08 11:23:18,391:INFO:System:
+2025-07-08 11:23:18,393:INFO:    python: 3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]
+2025-07-08 11:23:18,394:INFO:executable: C:\Users\CSUGAB01\OneDrive - ANDRITZ AG\Documents\Python\IRF - Teste Base OTP\.venv\Scripts\python.exe
+2025-07-08 11:23:18,394:INFO:   machine: Windows-10-10.0.22631-SP0
+2025-07-08 11:23:18,395:INFO:PyCaret required dependencies:
+2025-07-08 11:23:18,443:INFO:                 pip: 25.1.1
+2025-07-08 11:23:18,443:INFO:          setuptools: 65.5.0
+2025-07-08 11:23:18,443:INFO:             pycaret: 3.3.2
+2025-07-08 11:23:18,443:INFO:             IPython: 9.3.0
+2025-07-08 11:23:18,443:INFO:          ipywidgets: 8.1.7
+2025-07-08 11:23:18,443:INFO:                tqdm: 4.67.1
+2025-07-08 11:23:18,443:INFO:               numpy: 1.26.4
+2025-07-08 11:23:18,443:INFO:              pandas: 2.1.4
+2025-07-08 11:23:18,443:INFO:              jinja2: 3.1.6
+2025-07-08 11:23:18,444:INFO:               scipy: 1.11.4
+2025-07-08 11:23:18,444:INFO:              joblib: 1.3.2
+2025-07-08 11:23:18,444:INFO:             sklearn: 1.4.2
+2025-07-08 11:23:18,444:INFO:                pyod: 2.0.5
+2025-07-08 11:23:18,444:INFO:            imblearn: 0.13.0
+2025-07-08 11:23:18,444:INFO:   category_encoders: 2.7.0
+2025-07-08 11:23:18,444:INFO:            lightgbm: 4.6.0
+2025-07-08 11:23:18,444:INFO:               numba: 0.61.2
+2025-07-08 11:23:18,444:INFO:            requests: 2.32.4
+2025-07-08 11:23:18,444:INFO:          matplotlib: 3.7.5
+2025-07-08 11:23:18,444:INFO:          scikitplot: 0.3.7
+2025-07-08 11:23:18,444:INFO:         yellowbrick: 1.5
+2025-07-08 11:23:18,444:INFO:              plotly: 5.24.1
+2025-07-08 11:23:18,444:INFO:    plotly-resampler: Not installed
+2025-07-08 11:23:18,444:INFO:             kaleido: 1.0.0
+2025-07-08 11:23:18,444:INFO:           schemdraw: 0.15
+2025-07-08 11:23:18,444:INFO:         statsmodels: 0.14.4
+2025-07-08 11:23:18,444:INFO:              sktime: 0.26.0
+2025-07-08 11:23:18,444:INFO:               tbats: 1.1.3
+2025-07-08 11:23:18,444:INFO:            pmdarima: 2.0.4
+2025-07-08 11:23:18,444:INFO:              psutil: 7.0.0
+2025-07-08 11:23:18,444:INFO:          markupsafe: 3.0.2
+2025-07-08 11:23:18,444:INFO:             pickle5: Not installed
+2025-07-08 11:23:18,444:INFO:         cloudpickle: 3.1.1
+2025-07-08 11:23:18,444:INFO:         deprecation: 2.1.0
+2025-07-08 11:23:18,444:INFO:              xxhash: 3.5.0
+2025-07-08 11:23:18,444:INFO:           wurlitzer: Not installed
+2025-07-08 11:23:18,444:INFO:PyCaret optional dependencies:
+2025-07-08 11:23:18,460:INFO:                shap: Not installed
+2025-07-08 11:23:18,461:INFO:           interpret: Not installed
+2025-07-08 11:23:18,461:INFO:                umap: Not installed
+2025-07-08 11:23:18,461:INFO:     ydata_profiling: Not installed
+2025-07-08 11:23:18,461:INFO:  explainerdashboard: Not installed
+2025-07-08 11:23:18,461:INFO:             autoviz: Not installed
+2025-07-08 11:23:18,461:INFO:           fairlearn: Not installed
+2025-07-08 11:23:18,461:INFO:          deepchecks: Not installed
+2025-07-08 11:23:18,461:INFO:             xgboost: Not installed
+2025-07-08 11:23:18,461:INFO:            catboost: Not installed
+2025-07-08 11:23:18,461:INFO:              kmodes: Not installed
+2025-07-08 11:23:18,461:INFO:             mlxtend: Not installed
+2025-07-08 11:23:18,461:INFO:       statsforecast: Not installed
+2025-07-08 11:23:18,461:INFO:        tune_sklearn: Not installed
+2025-07-08 11:23:18,461:INFO:                 ray: Not installed
+2025-07-08 11:23:18,461:INFO:            hyperopt: Not installed
+2025-07-08 11:23:18,461:INFO:              optuna: Not installed
+2025-07-08 11:23:18,461:INFO:               skopt: Not installed
+2025-07-08 11:23:18,461:INFO:              mlflow: Not installed
+2025-07-08 11:23:18,461:INFO:              gradio: Not installed
+2025-07-08 11:23:18,461:INFO:             fastapi: Not installed
+2025-07-08 11:23:18,461:INFO:             uvicorn: Not installed
+2025-07-08 11:23:18,461:INFO:              m2cgen: Not installed
+2025-07-08 11:23:18,461:INFO:           evidently: Not installed
+2025-07-08 11:23:18,461:INFO:               fugue: Not installed
+2025-07-08 11:23:18,461:INFO:           streamlit: Not installed
+2025-07-08 11:23:18,461:INFO:             prophet: Not installed
+2025-07-08 11:23:18,461:INFO:None
+2025-07-08 11:23:18,461:INFO:Set up data.
+2025-07-08 11:23:18,466:INFO:Set up folding strategy.
+2025-07-08 11:23:18,466:INFO:Set up train/test split.
+2025-07-08 11:23:18,477:INFO:Set up index.
+2025-07-08 11:23:18,478:INFO:Assigning column types.
+2025-07-08 11:23:18,482:INFO:Engine successfully changes for model 'lr' to 'sklearn'.
+2025-07-08 11:23:18,515:INFO:Engine for model 'knn' has not been set explicitly, hence returning None.
+2025-07-08 11:23:18,519:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2025-07-08 11:23:18,552:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-07-08 11:23:18,552:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-07-08 11:23:18,590:INFO:Engine for model 'knn' has not been set explicitly, hence returning None.
+2025-07-08 11:23:18,591:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2025-07-08 11:23:18,624:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-07-08 11:23:18,624:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-07-08 11:23:18,625:INFO:Engine successfully changes for model 'knn' to 'sklearn'.
+2025-07-08 11:23:18,668:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2025-07-08 11:23:18,689:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-07-08 11:23:18,689:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-07-08 11:23:18,725:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2025-07-08 11:23:18,746:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-07-08 11:23:18,746:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-07-08 11:23:18,746:INFO:Engine successfully changes for model 'rbfsvm' to 'sklearn'.
+2025-07-08 11:23:18,803:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-07-08 11:23:18,803:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-07-08 11:23:18,857:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-07-08 11:23:18,857:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-07-08 11:23:18,859:INFO:Preparing preprocessing pipeline...
+2025-07-08 11:23:18,862:INFO:Set up simple imputation.
+2025-07-08 11:23:18,867:INFO:Set up encoding of categorical features.
+2025-07-08 11:23:18,867:INFO:Set up imbalanced handling.
+2025-07-08 11:23:18,868:INFO:Set up column name cleaning.
+2025-07-08 11:23:19,038:INFO:Finished creating preprocessing pipeline.
+2025-07-08 11:23:19,048:INFO:Pipeline: Pipeline(memory=FastMemory(location=C:\Users\CSUGAB01\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(exclude=None,
+                                    include=['NetOrderValue', 'MesPedido',
+                                             'IdadePedido', 'DiasParaEntrega',
+                                             'carga_fornecedor'],
+                                    transformer=SimpleImputer(add_indicator=False,
+                                                              copy=True,
+                                                              fill_value=None,
+                                                              keep_empty_features=False,
+                                                              missing_values=nan,
+                                                              str...
+                                                              min_samples_leaf=20,
+                                                              return_df=True,
+                                                              smoothing=10,
+                                                              verbose=0))),
+                ('balance',
+                 TransformerWrapper(exclude=None, include=None,
+                                    transformer=FixImbalancer(estimator=SMOTE(k_neighbors=5,
+                                                                              random_state=109,
+                                                                              sampling_strategy='auto')))),
+                ('clean_column_names',
+                 TransformerWrapper(exclude=None, include=None,
+                                    transformer=CleanColumnNames(match='[\\]\\[\\,\\{\\}\\"\\:]+')))],
+         verbose=False)
+2025-07-08 11:23:19,048:INFO:Creating final display dataframe.
+2025-07-08 11:23:19,389:INFO:Setup _display_container:                     Description             Value
+0                    Session id               109
+1                        Target           On Time
+2                   Target type            Binary
+3           Original data shape        (35823, 8)
+4        Transformed data shape        (53703, 8)
+5   Transformed train set shape        (42956, 8)
+6    Transformed test set shape        (10747, 8)
+7              Numeric features                 5
+8          Categorical features                 2
+9                    Preprocess              True
+10              Imputation type            simple
+11           Numeric imputation              mean
+12       Categorical imputation              mode
+13     Maximum one-hot encoding                25
+14              Encoding method              None
+15                Fix imbalance              True
+16         Fix imbalance method             SMOTE
+17               Fold Generator   StratifiedKFold
+18                  Fold Number                10
+19                     CPU Jobs                -1
+20                      Use GPU             False
+21               Log Experiment             False
+22              Experiment Name  clf-default-name
+23                          USI              b2c5
+2025-07-08 11:23:19,458:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-07-08 11:23:19,458:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-07-08 11:23:19,524:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-07-08 11:23:19,525:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-07-08 11:23:19,526:INFO:setup() successfully completed in 1.22s...............
+2025-07-08 11:23:19,526:INFO:Initializing create_model()
+2025-07-08 11:23:19,526:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000019FC9DE7010>, estimator=et, fold=None, round=4, cross_validation=True, predict=True, fit_kwargs=None, groups=None, refit=True, probability_threshold=None, experiment_custom_tags=None, verbose=True, system=True, add_to_model_list=True, metrics=None, display=None, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2025-07-08 11:23:19,526:INFO:Checking exceptions
+2025-07-08 11:23:19,530:INFO:Importing libraries
+2025-07-08 11:23:19,530:INFO:Copying training dataset
+2025-07-08 11:23:19,542:INFO:Defining folds
+2025-07-08 11:23:19,542:INFO:Declaring metric variables
+2025-07-08 11:23:19,542:INFO:Importing untrained model
+2025-07-08 11:23:19,543:INFO:Extra Trees Classifier Imported successfully
+2025-07-08 11:23:19,543:INFO:Starting cross validation
+2025-07-08 11:23:19,544:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2025-07-08 11:23:41,736:INFO:Calculating mean and std
+2025-07-08 11:23:41,737:INFO:Creating metrics dataframe
+2025-07-08 11:23:41,743:INFO:Finalizing model
+2025-07-08 11:23:42,728:INFO:Uploading results into container
+2025-07-08 11:23:42,729:INFO:Uploading model into container now
+2025-07-08 11:23:42,746:INFO:_master_model_container: 1
+2025-07-08 11:23:42,747:INFO:_display_container: 2
+2025-07-08 11:23:42,748:INFO:ExtraTreesClassifier(bootstrap=False, ccp_alpha=0.0, class_weight=None,
+                     criterion='gini', max_depth=None, max_features='sqrt',
+                     max_leaf_nodes=None, max_samples=None,
+                     min_impurity_decrease=0.0, min_samples_leaf=1,
+                     min_samples_split=2, min_weight_fraction_leaf=0.0,
+                     monotonic_cst=None, n_estimators=100, n_jobs=-1,
+                     oob_score=False, random_state=109, verbose=0,
+                     warm_start=False)
+2025-07-08 11:23:42,749:INFO:create_model() successfully completed......................................
+2025-07-08 11:23:42,982:INFO:Initializing finalize_model()
+2025-07-08 11:23:42,983:INFO:finalize_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000019FC9DE7010>, estimator=ExtraTreesClassifier(bootstrap=False, ccp_alpha=0.0, class_weight=None,
+                     criterion='gini', max_depth=None, max_features='sqrt',
+                     max_leaf_nodes=None, max_samples=None,
+                     min_impurity_decrease=0.0, min_samples_leaf=1,
+                     min_samples_split=2, min_weight_fraction_leaf=0.0,
+                     monotonic_cst=None, n_estimators=100, n_jobs=-1,
+                     oob_score=False, random_state=109, verbose=0,
+                     warm_start=False), fit_kwargs=None, groups=None, model_only=False, experiment_custom_tags=None)
+2025-07-08 11:23:42,984:INFO:Finalizing ExtraTreesClassifier(bootstrap=False, ccp_alpha=0.0, class_weight=None,
+                     criterion='gini', max_depth=None, max_features='sqrt',
+                     max_leaf_nodes=None, max_samples=None,
+                     min_impurity_decrease=0.0, min_samples_leaf=1,
+                     min_samples_split=2, min_weight_fraction_leaf=0.0,
+                     monotonic_cst=None, n_estimators=100, n_jobs=-1,
+                     oob_score=False, random_state=109, verbose=0,
+                     warm_start=False)
+2025-07-08 11:23:42,989:INFO:Initializing create_model()
+2025-07-08 11:23:42,990:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000019FC9DE7010>, estimator=ExtraTreesClassifier(bootstrap=False, ccp_alpha=0.0, class_weight=None,
+                     criterion='gini', max_depth=None, max_features='sqrt',
+                     max_leaf_nodes=None, max_samples=None,
+                     min_impurity_decrease=0.0, min_samples_leaf=1,
+                     min_samples_split=2, min_weight_fraction_leaf=0.0,
+                     monotonic_cst=None, n_estimators=100, n_jobs=-1,
+                     oob_score=False, random_state=109, verbose=0,
+                     warm_start=False), fold=None, round=4, cross_validation=False, predict=False, fit_kwargs={}, groups=None, refit=True, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=False, metrics=None, display=None, model_only=False, return_train_score=False, error_score=0.0, kwargs={})
+2025-07-08 11:23:42,991:INFO:Checking exceptions
+2025-07-08 11:23:42,991:INFO:Importing libraries
+2025-07-08 11:23:42,992:INFO:Copying training dataset
+2025-07-08 11:23:42,993:INFO:Defining folds
+2025-07-08 11:23:42,993:INFO:Declaring metric variables
+2025-07-08 11:23:42,994:INFO:Importing untrained model
+2025-07-08 11:23:42,994:INFO:Declaring custom model
+2025-07-08 11:23:42,995:INFO:Extra Trees Classifier Imported successfully
+2025-07-08 11:23:42,997:INFO:Cross validation set to False
+2025-07-08 11:23:42,997:INFO:Fitting Model
+2025-07-08 11:23:44,281:INFO:Pipeline(memory=Memory(location=None),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(exclude=None,
+                                    include=['NetOrderValue', 'MesPedido',
+                                             'IdadePedido', 'DiasParaEntrega',
+                                             'carga_fornecedor'],
+                                    transformer=SimpleImputer(add_indicator=False,
+                                                              copy=True,
+                                                              fill_value=None,
+                                                              keep_empty_features=False,
+                                                              missing_values=nan,
+                                                              strategy='mean'))),
+                ('categorical_imputer',
+                 Tran...
+                 ExtraTreesClassifier(bootstrap=False, ccp_alpha=0.0,
+                                      class_weight=None, criterion='gini',
+                                      max_depth=None, max_features='sqrt',
+                                      max_leaf_nodes=None, max_samples=None,
+                                      min_impurity_decrease=0.0,
+                                      min_samples_leaf=1, min_samples_split=2,
+                                      min_weight_fraction_leaf=0.0,
+                                      monotonic_cst=None, n_estimators=100,
+                                      n_jobs=-1, oob_score=False,
+                                      random_state=109, verbose=0,
+                                      warm_start=False))],
+         verbose=False)
+2025-07-08 11:23:44,281:INFO:create_model() successfully completed......................................
+2025-07-08 11:23:44,373:INFO:_master_model_container: 1
+2025-07-08 11:23:44,373:INFO:_display_container: 2
+2025-07-08 11:23:44,388:INFO:Pipeline(memory=Memory(location=None),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(exclude=None,
+                                    include=['NetOrderValue', 'MesPedido',
+                                             'IdadePedido', 'DiasParaEntrega',
+                                             'carga_fornecedor'],
+                                    transformer=SimpleImputer(add_indicator=False,
+                                                              copy=True,
+                                                              fill_value=None,
+                                                              keep_empty_features=False,
+                                                              missing_values=nan,
+                                                              strategy='mean'))),
+                ('categorical_imputer',
+                 Tran...
+                 ExtraTreesClassifier(bootstrap=False, ccp_alpha=0.0,
+                                      class_weight=None, criterion='gini',
+                                      max_depth=None, max_features='sqrt',
+                                      max_leaf_nodes=None, max_samples=None,
+                                      min_impurity_decrease=0.0,
+                                      min_samples_leaf=1, min_samples_split=2,
+                                      min_weight_fraction_leaf=0.0,
+                                      monotonic_cst=None, n_estimators=100,
+                                      n_jobs=-1, oob_score=False,
+                                      random_state=109, verbose=0,
+                                      warm_start=False))],
+         verbose=False)
+2025-07-08 11:23:44,388:INFO:finalize_model() successfully completed......................................
+2025-07-08 11:23:44,490:INFO:Initializing save_model()
+2025-07-08 11:23:44,490:INFO:save_model(model=Pipeline(memory=Memory(location=None),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(exclude=None,
+                                    include=['NetOrderValue', 'MesPedido',
+                                             'IdadePedido', 'DiasParaEntrega',
+                                             'carga_fornecedor'],
+                                    transformer=SimpleImputer(add_indicator=False,
+                                                              copy=True,
+                                                              fill_value=None,
+                                                              keep_empty_features=False,
+                                                              missing_values=nan,
+                                                              strategy='mean'))),
+                ('categorical_imputer',
+                 Tran...
+                 ExtraTreesClassifier(bootstrap=False, ccp_alpha=0.0,
+                                      class_weight=None, criterion='gini',
+                                      max_depth=None, max_features='sqrt',
+                                      max_leaf_nodes=None, max_samples=None,
+                                      min_impurity_decrease=0.0,
+                                      min_samples_leaf=1, min_samples_split=2,
+                                      min_weight_fraction_leaf=0.0,
+                                      monotonic_cst=None, n_estimators=100,
+                                      n_jobs=-1, oob_score=False,
+                                      random_state=109, verbose=0,
+                                      warm_start=False))],
+         verbose=False), model_name=S:\Procurement\FUP\IRF - Índice de Risco de Fornecedores\Modelo de Machine Learning\modelo_treinado_teste_anual, prep_pipe_=Pipeline(memory=FastMemory(location=C:\Users\CSUGAB01\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(exclude=None,
+                                    include=['NetOrderValue', 'MesPedido',
+                                             'IdadePedido', 'DiasParaEntrega',
+                                             'carga_fornecedor'],
+                                    transformer=SimpleImputer(add_indicator=False,
+                                                              copy=True,
+                                                              fill_value=None,
+                                                              keep_empty_features=False,
+                                                              missing_values=nan,
+                                                              str...
+                                                              min_samples_leaf=20,
+                                                              return_df=True,
+                                                              smoothing=10,
+                                                              verbose=0))),
+                ('balance',
+                 TransformerWrapper(exclude=None, include=None,
+                                    transformer=FixImbalancer(estimator=SMOTE(k_neighbors=5,
+                                                                              random_state=109,
+                                                                              sampling_strategy='auto')))),
+                ('clean_column_names',
+                 TransformerWrapper(exclude=None, include=None,
+                                    transformer=CleanColumnNames(match='[\\]\\[\\,\\{\\}\\"\\:]+')))],
+         verbose=False), verbose=True, use_case=MLUsecase.CLASSIFICATION, kwargs={})
+2025-07-08 11:23:44,491:INFO:Adding model into prep_pipe
+2025-07-08 11:23:44,491:WARNING:Only Model saved as it was a pipeline.
+2025-07-08 11:23:52,184:INFO:S:\Procurement\FUP\IRF - Índice de Risco de Fornecedores\Modelo de Machine Learning\modelo_treinado_teste_anual.pkl saved in current working directory
+2025-07-08 11:23:52,196:INFO:Pipeline(memory=Memory(location=None),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(exclude=None,
+                                    include=['NetOrderValue', 'MesPedido',
+                                             'IdadePedido', 'DiasParaEntrega',
+                                             'carga_fornecedor'],
+                                    transformer=SimpleImputer(add_indicator=False,
+                                                              copy=True,
+                                                              fill_value=None,
+                                                              keep_empty_features=False,
+                                                              missing_values=nan,
+                                                              strategy='mean'))),
+                ('categorical_imputer',
+                 Tran...
+                 ExtraTreesClassifier(bootstrap=False, ccp_alpha=0.0,
+                                      class_weight=None, criterion='gini',
+                                      max_depth=None, max_features='sqrt',
+                                      max_leaf_nodes=None, max_samples=None,
+                                      min_impurity_decrease=0.0,
+                                      min_samples_leaf=1, min_samples_split=2,
+                                      min_weight_fraction_leaf=0.0,
+                                      monotonic_cst=None, n_estimators=100,
+                                      n_jobs=-1, oob_score=False,
+                                      random_state=109, verbose=0,
+                                      warm_start=False))],
+         verbose=False)
+2025-07-08 11:23:52,196:INFO:save_model() successfully completed......................................
+2025-07-08 11:35:23,965:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-07-08 11:35:23,967:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-07-08 11:35:23,967:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-07-08 11:35:23,968:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-07-08 11:36:20,723:INFO:Initializing load_model()
+2025-07-08 11:36:20,723:INFO:load_model(model_name=S:\Procurement\FUP\IRF - Índice de Risco de Fornecedores\Modelo de Machine Learning\modelo_treinado_teste_anual, platform=None, authentication=None, verbose=True)
+2025-07-08 11:36:29,117:INFO:Initializing predict_model()
+2025-07-08 11:36:29,119:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000021E50CE8190>, estimator=Pipeline(memory=Memory(location=None),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['NetOrderValue', 'MesPedido',
+                                             'IdadePedido', 'DiasParaEntrega',
+                                             'carga_fornecedor'],
+                                    transformer=SimpleImputer())),
+                ('categorical_imputer',
+                 TransformerWrapper(include=['MATKL', 'Vendor'],
+                                    transformer=SimpleImputer(strategy='most_frequent'))),
+                ('rest_encoding',
+                 Transf...per(include=['MATKL', 'Vendor'],
+                                    transformer=TargetEncoder(cols=['MATKL',
+                                                                    'Vendor'],
+                                                              handle_missing='return_nan'))),
+                ('balance',
+                 TransformerWrapper(transformer=FixImbalancer(estimator=SMOTE(random_state=109)))),
+                ('clean_column_names',
+                 TransformerWrapper(transformer=CleanColumnNames())),
+                ('actual_estimator',
+                 ExtraTreesClassifier(n_jobs=-1, random_state=109))]), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x0000021E4FB4A5C0>)
+2025-07-08 11:36:29,120:INFO:Checking exceptions
+2025-07-08 11:36:29,120:INFO:Preloading libraries
+2025-07-08 11:36:29,120:INFO:Set up data.
+2025-07-08 11:36:29,131:INFO:Set up index.
+2025-07-08 14:35:32,943:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-07-08 14:35:32,943:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-07-08 14:35:32,943:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-07-08 14:35:32,943:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-07-08 14:36:10,308:INFO:Initializing load_model()
+2025-07-08 14:36:10,308:INFO:load_model(model_name=S:\Procurement\FUP\IRF - Índice de Risco de Fornecedores\Modelo de Machine Learning\modelo_treinado_teste_anual, platform=None, authentication=None, verbose=True)
+2025-07-08 14:36:21,063:INFO:Initializing predict_model()
+2025-07-08 14:36:21,063:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000002DA38673550>, estimator=Pipeline(memory=Memory(location=None),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['NetOrderValue', 'MesPedido',
+                                             'IdadePedido', 'DiasParaEntrega',
+                                             'carga_fornecedor'],
+                                    transformer=SimpleImputer())),
+                ('categorical_imputer',
+                 TransformerWrapper(include=['MATKL', 'Vendor'],
+                                    transformer=SimpleImputer(strategy='most_frequent'))),
+                ('rest_encoding',
+                 Transf...per(include=['MATKL', 'Vendor'],
+                                    transformer=TargetEncoder(cols=['MATKL',
+                                                                    'Vendor'],
+                                                              handle_missing='return_nan'))),
+                ('balance',
+                 TransformerWrapper(transformer=FixImbalancer(estimator=SMOTE(random_state=109)))),
+                ('clean_column_names',
+                 TransformerWrapper(transformer=CleanColumnNames())),
+                ('actual_estimator',
+                 ExtraTreesClassifier(n_jobs=-1, random_state=109))]), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x000002DA383BE5C0>)
+2025-07-08 14:36:21,063:INFO:Checking exceptions
+2025-07-08 14:36:21,063:INFO:Preloading libraries
+2025-07-08 14:36:21,063:INFO:Set up data.
+2025-07-08 14:36:21,086:INFO:Set up index.
+2025-07-09 08:54:39,183:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-07-09 08:54:39,194:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-07-09 08:54:39,194:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-07-09 08:54:39,194:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-07-09 14:18:05,777:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-07-09 14:18:05,777:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-07-09 14:18:05,777:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-07-09 14:18:05,777:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-07-09 14:18:12,774:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-07-09 14:18:12,782:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-07-09 14:18:12,782:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-07-09 14:18:12,784:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-07-09 14:18:23,657:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-07-09 14:18:23,657:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-07-09 14:18:23,657:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-07-09 14:18:23,657:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-07-09 14:19:15,498:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-07-09 14:19:15,498:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-07-09 14:19:15,498:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-07-09 14:19:15,498:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-07-09 14:20:39,031:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-07-09 14:20:39,031:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-07-09 14:20:39,034:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-07-09 14:20:39,034:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-07-09 14:20:48,090:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-07-09 14:20:48,090:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-07-09 14:20:48,090:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-07-09 14:20:48,090:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-07-09 14:22:13,532:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-07-09 14:22:13,532:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-07-09 14:22:13,532:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-07-09 14:22:13,532:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-07-09 14:23:06,174:WARNING:C:\Users\CSUGAB01\OneDrive - ANDRITZ AG\Documents\Python\IRF - Teste Base OTP\modelo_irf.py:133: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.
+  df_events.groupby('Vendor')['start'].cumsum() - df_events.groupby('Vendor')['end'].cumsum()
+
+2025-07-09 14:23:15,230:INFO:PyCaret ClassificationExperiment
+2025-07-09 14:23:15,230:INFO:Logging name: clf-default-name
+2025-07-09 14:23:15,230:INFO:ML Usecase: MLUsecase.CLASSIFICATION
+2025-07-09 14:23:15,230:INFO:version 3.3.2
+2025-07-09 14:23:15,230:INFO:Initializing setup()
+2025-07-09 14:23:15,230:INFO:self.USI: f6e0
+2025-07-09 14:23:15,230:INFO:self._variable_keys: {'fold_shuffle_param', '_available_plots', 'pipeline', 'fold_generator', 'exp_id', 'idx', 'exp_name_log', 'gpu_n_jobs_param', 'y_train', 'y', 'data', 'html_param', 'n_jobs_param', 'gpu_param', 'is_multiclass', 'fix_imbalance', 'target_param', 'logging_param', 'USI', 'log_plots_param', 'y_test', 'X_train', 'X_test', '_ml_usecase', 'X', 'seed', 'fold_groups_param', 'memory'}
+2025-07-09 14:23:15,230:INFO:Checking environment
+2025-07-09 14:23:15,230:INFO:python_version: 3.11.9
+2025-07-09 14:23:15,236:INFO:python_build: ('tags/v3.11.9:de54cf5', 'Apr  2 2024 10:12:12')
+2025-07-09 14:23:15,236:INFO:machine: AMD64
+2025-07-09 14:23:15,270:INFO:platform: Windows-10-10.0.22631-SP0
+2025-07-09 14:23:15,277:INFO:Memory: svmem(total=16844595200, available=2016792576, percent=88.0, used=14827802624, free=2016792576)
+2025-07-09 14:23:15,277:INFO:Physical Core: 4
+2025-07-09 14:23:15,277:INFO:Logical Core: 8
+2025-07-09 14:23:15,277:INFO:Checking libraries
+2025-07-09 14:23:15,277:INFO:System:
+2025-07-09 14:23:15,277:INFO:    python: 3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]
+2025-07-09 14:23:15,277:INFO:executable: C:\Users\CSUGAB01\OneDrive - ANDRITZ AG\Documents\Python\IRF - Teste Base OTP\.venv\Scripts\python.exe
+2025-07-09 14:23:15,277:INFO:   machine: Windows-10-10.0.22631-SP0
+2025-07-09 14:23:15,277:INFO:PyCaret required dependencies:
+2025-07-09 14:23:15,333:INFO:                 pip: 25.1.1
+2025-07-09 14:23:15,333:INFO:          setuptools: 65.5.0
+2025-07-09 14:23:15,333:INFO:             pycaret: 3.3.2
+2025-07-09 14:23:15,333:INFO:             IPython: 9.3.0
+2025-07-09 14:23:15,333:INFO:          ipywidgets: 8.1.7
+2025-07-09 14:23:15,333:INFO:                tqdm: 4.67.1
+2025-07-09 14:23:15,333:INFO:               numpy: 1.26.4
+2025-07-09 14:23:15,333:INFO:              pandas: 2.1.4
+2025-07-09 14:23:15,333:INFO:              jinja2: 3.1.6
+2025-07-09 14:23:15,333:INFO:               scipy: 1.11.4
+2025-07-09 14:23:15,333:INFO:              joblib: 1.3.2
+2025-07-09 14:23:15,333:INFO:             sklearn: 1.4.2
+2025-07-09 14:23:15,333:INFO:                pyod: 2.0.5
+2025-07-09 14:23:15,333:INFO:            imblearn: 0.13.0
+2025-07-09 14:23:15,333:INFO:   category_encoders: 2.7.0
+2025-07-09 14:23:15,333:INFO:            lightgbm: 4.6.0
+2025-07-09 14:23:15,333:INFO:               numba: 0.61.2
+2025-07-09 14:23:15,333:INFO:            requests: 2.32.4
+2025-07-09 14:23:15,333:INFO:          matplotlib: 3.7.5
+2025-07-09 14:23:15,333:INFO:          scikitplot: 0.3.7
+2025-07-09 14:23:15,333:INFO:         yellowbrick: 1.5
+2025-07-09 14:23:15,333:INFO:              plotly: 5.24.1
+2025-07-09 14:23:15,333:INFO:    plotly-resampler: Not installed
+2025-07-09 14:23:15,333:INFO:             kaleido: 1.0.0
+2025-07-09 14:23:15,333:INFO:           schemdraw: 0.15
+2025-07-09 14:23:15,333:INFO:         statsmodels: 0.14.4
+2025-07-09 14:23:15,333:INFO:              sktime: 0.26.0
+2025-07-09 14:23:15,333:INFO:               tbats: 1.1.3
+2025-07-09 14:23:15,333:INFO:            pmdarima: 2.0.4
+2025-07-09 14:23:15,333:INFO:              psutil: 7.0.0
+2025-07-09 14:23:15,333:INFO:          markupsafe: 3.0.2
+2025-07-09 14:23:15,333:INFO:             pickle5: Not installed
+2025-07-09 14:23:15,333:INFO:         cloudpickle: 3.1.1
+2025-07-09 14:23:15,333:INFO:         deprecation: 2.1.0
+2025-07-09 14:23:15,333:INFO:              xxhash: 3.5.0
+2025-07-09 14:23:15,333:INFO:           wurlitzer: Not installed
+2025-07-09 14:23:15,333:INFO:PyCaret optional dependencies:
+2025-07-09 14:23:15,345:INFO:                shap: Not installed
+2025-07-09 14:23:15,345:INFO:           interpret: Not installed
+2025-07-09 14:23:15,345:INFO:                umap: Not installed
+2025-07-09 14:23:15,345:INFO:     ydata_profiling: Not installed
+2025-07-09 14:23:15,345:INFO:  explainerdashboard: Not installed
+2025-07-09 14:23:15,345:INFO:             autoviz: Not installed
+2025-07-09 14:23:15,345:INFO:           fairlearn: Not installed
+2025-07-09 14:23:15,345:INFO:          deepchecks: Not installed
+2025-07-09 14:23:15,345:INFO:             xgboost: Not installed
+2025-07-09 14:23:15,345:INFO:            catboost: Not installed
+2025-07-09 14:23:15,345:INFO:              kmodes: Not installed
+2025-07-09 14:23:15,345:INFO:             mlxtend: Not installed
+2025-07-09 14:23:15,345:INFO:       statsforecast: Not installed
+2025-07-09 14:23:15,345:INFO:        tune_sklearn: Not installed
+2025-07-09 14:23:15,345:INFO:                 ray: Not installed
+2025-07-09 14:23:15,345:INFO:            hyperopt: Not installed
+2025-07-09 14:23:15,345:INFO:              optuna: Not installed
+2025-07-09 14:23:15,345:INFO:               skopt: Not installed
+2025-07-09 14:23:15,345:INFO:              mlflow: Not installed
+2025-07-09 14:23:15,345:INFO:              gradio: Not installed
+2025-07-09 14:23:15,345:INFO:             fastapi: Not installed
+2025-07-09 14:23:15,345:INFO:             uvicorn: Not installed
+2025-07-09 14:23:15,345:INFO:              m2cgen: Not installed
+2025-07-09 14:23:15,345:INFO:           evidently: Not installed
+2025-07-09 14:23:15,345:INFO:               fugue: Not installed
+2025-07-09 14:23:15,345:INFO:           streamlit: Not installed
+2025-07-09 14:23:15,345:INFO:             prophet: Not installed
+2025-07-09 14:23:15,345:INFO:None
+2025-07-09 14:23:15,345:INFO:Set up data.
+2025-07-09 14:23:15,345:INFO:Set up folding strategy.
+2025-07-09 14:23:15,355:INFO:Set up train/test split.
+2025-07-09 14:23:15,360:INFO:Set up index.
+2025-07-09 14:23:15,369:INFO:Assigning column types.
+2025-07-09 14:23:15,372:INFO:Engine successfully changes for model 'lr' to 'sklearn'.
+2025-07-09 14:23:15,435:INFO:Engine for model 'knn' has not been set explicitly, hence returning None.
+2025-07-09 14:23:15,440:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2025-07-09 14:23:15,482:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-07-09 14:23:15,482:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-07-09 14:23:15,537:INFO:Engine for model 'knn' has not been set explicitly, hence returning None.
+2025-07-09 14:23:15,537:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2025-07-09 14:23:15,578:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-07-09 14:23:15,578:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-07-09 14:23:15,578:INFO:Engine successfully changes for model 'knn' to 'sklearn'.
+2025-07-09 14:23:15,649:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2025-07-09 14:23:15,685:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-07-09 14:23:15,685:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-07-09 14:23:15,729:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2025-07-09 14:23:15,769:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-07-09 14:23:15,769:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-07-09 14:23:15,771:INFO:Engine successfully changes for model 'rbfsvm' to 'sklearn'.
+2025-07-09 14:23:15,850:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-07-09 14:23:15,850:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-07-09 14:23:15,932:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-07-09 14:23:15,932:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-07-09 14:23:15,935:INFO:Preparing preprocessing pipeline...
+2025-07-09 14:23:15,935:INFO:Set up simple imputation.
+2025-07-09 14:23:15,944:INFO:Set up encoding of categorical features.
+2025-07-09 14:23:15,944:INFO:Set up imbalanced handling.
+2025-07-09 14:23:15,945:INFO:Set up column name cleaning.
+2025-07-09 14:23:16,305:INFO:Finished creating preprocessing pipeline.
+2025-07-09 14:23:16,315:INFO:Pipeline: Pipeline(memory=FastMemory(location=C:\Users\CSUGAB01\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(exclude=None,
+                                    include=['NetOrderValue', 'MesPedido',
+                                             'IdadePedido', 'DiasParaEntrega',
+                                             'carga_fornecedor'],
+                                    transformer=SimpleImputer(add_indicator=False,
+                                                              copy=True,
+                                                              fill_value=None,
+                                                              keep_empty_features=False,
+                                                              missing_values=nan,
+                                                              str...
+                                                              min_samples_leaf=20,
+                                                              return_df=True,
+                                                              smoothing=10,
+                                                              verbose=0))),
+                ('balance',
+                 TransformerWrapper(exclude=None, include=None,
+                                    transformer=FixImbalancer(estimator=SMOTE(k_neighbors=5,
+                                                                              random_state=109,
+                                                                              sampling_strategy='auto')))),
+                ('clean_column_names',
+                 TransformerWrapper(exclude=None, include=None,
+                                    transformer=CleanColumnNames(match='[\\]\\[\\,\\{\\}\\"\\:]+')))],
+         verbose=False)
+2025-07-09 14:23:16,315:INFO:Creating final display dataframe.
+2025-07-09 14:23:16,761:INFO:Setup _display_container:                     Description             Value
+0                    Session id               109
+1                        Target           On Time
+2                   Target type            Binary
+3           Original data shape        (35911, 8)
+4        Transformed data shape        (53794, 8)
+5   Transformed train set shape        (43020, 8)
+6    Transformed test set shape        (10774, 8)
+7              Numeric features                 5
+8          Categorical features                 2
+9                    Preprocess              True
+10              Imputation type            simple
+11           Numeric imputation              mean
+12       Categorical imputation              mode
+13     Maximum one-hot encoding                25
+14              Encoding method              None
+15                Fix imbalance              True
+16         Fix imbalance method             SMOTE
+17               Fold Generator   StratifiedKFold
+18                  Fold Number                10
+19                     CPU Jobs                -1
+20                      Use GPU             False
+21               Log Experiment             False
+22              Experiment Name  clf-default-name
+23                          USI              f6e0
+2025-07-09 14:23:16,845:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-07-09 14:23:16,845:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-07-09 14:23:16,956:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-07-09 14:23:16,956:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-07-09 14:23:16,956:INFO:setup() successfully completed in 1.74s...............
+2025-07-09 14:23:16,956:INFO:Initializing create_model()
+2025-07-09 14:23:16,956:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001519EC22190>, estimator=et, fold=None, round=4, cross_validation=True, predict=True, fit_kwargs=None, groups=None, refit=True, probability_threshold=None, experiment_custom_tags=None, verbose=True, system=True, add_to_model_list=True, metrics=None, display=None, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2025-07-09 14:23:16,956:INFO:Checking exceptions
+2025-07-09 14:23:16,965:INFO:Importing libraries
+2025-07-09 14:23:16,965:INFO:Copying training dataset
+2025-07-09 14:23:16,984:INFO:Defining folds
+2025-07-09 14:23:16,984:INFO:Declaring metric variables
+2025-07-09 14:23:16,984:INFO:Importing untrained model
+2025-07-09 14:23:16,984:INFO:Extra Trees Classifier Imported successfully
+2025-07-09 14:23:16,984:INFO:Starting cross validation
+2025-07-09 14:23:16,984:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2025-07-09 14:23:40,334:INFO:Calculating mean and std
+2025-07-09 14:23:40,340:INFO:Creating metrics dataframe
+2025-07-09 14:23:40,344:INFO:Finalizing model
+2025-07-09 14:23:41,585:INFO:Uploading results into container
+2025-07-09 14:23:41,586:INFO:Uploading model into container now
+2025-07-09 14:23:41,615:INFO:_master_model_container: 1
+2025-07-09 14:23:41,615:INFO:_display_container: 2
+2025-07-09 14:23:41,615:INFO:ExtraTreesClassifier(bootstrap=False, ccp_alpha=0.0, class_weight=None,
+                     criterion='gini', max_depth=None, max_features='sqrt',
+                     max_leaf_nodes=None, max_samples=None,
+                     min_impurity_decrease=0.0, min_samples_leaf=1,
+                     min_samples_split=2, min_weight_fraction_leaf=0.0,
+                     monotonic_cst=None, n_estimators=100, n_jobs=-1,
+                     oob_score=False, random_state=109, verbose=0,
+                     warm_start=False)
+2025-07-09 14:23:41,615:INFO:create_model() successfully completed......................................
+2025-07-09 14:23:41,940:INFO:Initializing finalize_model()
+2025-07-09 14:23:41,940:INFO:finalize_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001519EC22190>, estimator=ExtraTreesClassifier(bootstrap=False, ccp_alpha=0.0, class_weight=None,
+                     criterion='gini', max_depth=None, max_features='sqrt',
+                     max_leaf_nodes=None, max_samples=None,
+                     min_impurity_decrease=0.0, min_samples_leaf=1,
+                     min_samples_split=2, min_weight_fraction_leaf=0.0,
+                     monotonic_cst=None, n_estimators=100, n_jobs=-1,
+                     oob_score=False, random_state=109, verbose=0,
+                     warm_start=False), fit_kwargs=None, groups=None, model_only=False, experiment_custom_tags=None)
+2025-07-09 14:23:41,943:INFO:Finalizing ExtraTreesClassifier(bootstrap=False, ccp_alpha=0.0, class_weight=None,
+                     criterion='gini', max_depth=None, max_features='sqrt',
+                     max_leaf_nodes=None, max_samples=None,
+                     min_impurity_decrease=0.0, min_samples_leaf=1,
+                     min_samples_split=2, min_weight_fraction_leaf=0.0,
+                     monotonic_cst=None, n_estimators=100, n_jobs=-1,
+                     oob_score=False, random_state=109, verbose=0,
+                     warm_start=False)
+2025-07-09 14:23:41,960:INFO:Initializing create_model()
+2025-07-09 14:23:41,960:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001519EC22190>, estimator=ExtraTreesClassifier(bootstrap=False, ccp_alpha=0.0, class_weight=None,
+                     criterion='gini', max_depth=None, max_features='sqrt',
+                     max_leaf_nodes=None, max_samples=None,
+                     min_impurity_decrease=0.0, min_samples_leaf=1,
+                     min_samples_split=2, min_weight_fraction_leaf=0.0,
+                     monotonic_cst=None, n_estimators=100, n_jobs=-1,
+                     oob_score=False, random_state=109, verbose=0,
+                     warm_start=False), fold=None, round=4, cross_validation=False, predict=False, fit_kwargs={}, groups=None, refit=True, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=False, metrics=None, display=None, model_only=False, return_train_score=False, error_score=0.0, kwargs={})
+2025-07-09 14:23:41,960:INFO:Checking exceptions
+2025-07-09 14:23:41,966:INFO:Importing libraries
+2025-07-09 14:23:41,966:INFO:Copying training dataset
+2025-07-09 14:23:41,966:INFO:Defining folds
+2025-07-09 14:23:41,966:INFO:Declaring metric variables
+2025-07-09 14:23:41,966:INFO:Importing untrained model
+2025-07-09 14:23:41,966:INFO:Declaring custom model
+2025-07-09 14:23:41,966:INFO:Extra Trees Classifier Imported successfully
+2025-07-09 14:23:41,974:INFO:Cross validation set to False
+2025-07-09 14:23:41,974:INFO:Fitting Model
+2025-07-09 14:23:43,694:INFO:Pipeline(memory=Memory(location=None),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(exclude=None,
+                                    include=['NetOrderValue', 'MesPedido',
+                                             'IdadePedido', 'DiasParaEntrega',
+                                             'carga_fornecedor'],
+                                    transformer=SimpleImputer(add_indicator=False,
+                                                              copy=True,
+                                                              fill_value=None,
+                                                              keep_empty_features=False,
+                                                              missing_values=nan,
+                                                              strategy='mean'))),
+                ('categorical_imputer',
+                 Tran...
+                 ExtraTreesClassifier(bootstrap=False, ccp_alpha=0.0,
+                                      class_weight=None, criterion='gini',
+                                      max_depth=None, max_features='sqrt',
+                                      max_leaf_nodes=None, max_samples=None,
+                                      min_impurity_decrease=0.0,
+                                      min_samples_leaf=1, min_samples_split=2,
+                                      min_weight_fraction_leaf=0.0,
+                                      monotonic_cst=None, n_estimators=100,
+                                      n_jobs=-1, oob_score=False,
+                                      random_state=109, verbose=0,
+                                      warm_start=False))],
+         verbose=False)
+2025-07-09 14:23:43,694:INFO:create_model() successfully completed......................................
+2025-07-09 14:23:43,810:INFO:_master_model_container: 1
+2025-07-09 14:23:43,810:INFO:_display_container: 2
+2025-07-09 14:23:43,836:INFO:Pipeline(memory=Memory(location=None),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(exclude=None,
+                                    include=['NetOrderValue', 'MesPedido',
+                                             'IdadePedido', 'DiasParaEntrega',
+                                             'carga_fornecedor'],
+                                    transformer=SimpleImputer(add_indicator=False,
+                                                              copy=True,
+                                                              fill_value=None,
+                                                              keep_empty_features=False,
+                                                              missing_values=nan,
+                                                              strategy='mean'))),
+                ('categorical_imputer',
+                 Tran...
+                 ExtraTreesClassifier(bootstrap=False, ccp_alpha=0.0,
+                                      class_weight=None, criterion='gini',
+                                      max_depth=None, max_features='sqrt',
+                                      max_leaf_nodes=None, max_samples=None,
+                                      min_impurity_decrease=0.0,
+                                      min_samples_leaf=1, min_samples_split=2,
+                                      min_weight_fraction_leaf=0.0,
+                                      monotonic_cst=None, n_estimators=100,
+                                      n_jobs=-1, oob_score=False,
+                                      random_state=109, verbose=0,
+                                      warm_start=False))],
+         verbose=False)
+2025-07-09 14:23:43,836:INFO:finalize_model() successfully completed......................................
+2025-07-09 14:23:43,965:INFO:Initializing save_model()
+2025-07-09 14:23:43,965:INFO:save_model(model=Pipeline(memory=Memory(location=None),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(exclude=None,
+                                    include=['NetOrderValue', 'MesPedido',
+                                             'IdadePedido', 'DiasParaEntrega',
+                                             'carga_fornecedor'],
+                                    transformer=SimpleImputer(add_indicator=False,
+                                                              copy=True,
+                                                              fill_value=None,
+                                                              keep_empty_features=False,
+                                                              missing_values=nan,
+                                                              strategy='mean'))),
+                ('categorical_imputer',
+                 Tran...
+                 ExtraTreesClassifier(bootstrap=False, ccp_alpha=0.0,
+                                      class_weight=None, criterion='gini',
+                                      max_depth=None, max_features='sqrt',
+                                      max_leaf_nodes=None, max_samples=None,
+                                      min_impurity_decrease=0.0,
+                                      min_samples_leaf=1, min_samples_split=2,
+                                      min_weight_fraction_leaf=0.0,
+                                      monotonic_cst=None, n_estimators=100,
+                                      n_jobs=-1, oob_score=False,
+                                      random_state=109, verbose=0,
+                                      warm_start=False))],
+         verbose=False), model_name=S:\Procurement\FUP\IRF - Índice de Risco de Fornecedores\Modelo de Machine Learning\modelo_treinado_teste_anual, prep_pipe_=Pipeline(memory=FastMemory(location=C:\Users\CSUGAB01\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(exclude=None,
+                                    include=['NetOrderValue', 'MesPedido',
+                                             'IdadePedido', 'DiasParaEntrega',
+                                             'carga_fornecedor'],
+                                    transformer=SimpleImputer(add_indicator=False,
+                                                              copy=True,
+                                                              fill_value=None,
+                                                              keep_empty_features=False,
+                                                              missing_values=nan,
+                                                              str...
+                                                              min_samples_leaf=20,
+                                                              return_df=True,
+                                                              smoothing=10,
+                                                              verbose=0))),
+                ('balance',
+                 TransformerWrapper(exclude=None, include=None,
+                                    transformer=FixImbalancer(estimator=SMOTE(k_neighbors=5,
+                                                                              random_state=109,
+                                                                              sampling_strategy='auto')))),
+                ('clean_column_names',
+                 TransformerWrapper(exclude=None, include=None,
+                                    transformer=CleanColumnNames(match='[\\]\\[\\,\\{\\}\\"\\:]+')))],
+         verbose=False), verbose=True, use_case=MLUsecase.CLASSIFICATION, kwargs={})
+2025-07-09 14:23:43,965:INFO:Adding model into prep_pipe
+2025-07-09 14:23:43,965:WARNING:Only Model saved as it was a pipeline.
+2025-07-09 14:23:51,779:INFO:S:\Procurement\FUP\IRF - Índice de Risco de Fornecedores\Modelo de Machine Learning\modelo_treinado_teste_anual.pkl saved in current working directory
+2025-07-09 14:23:51,790:INFO:Pipeline(memory=Memory(location=None),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(exclude=None,
+                                    include=['NetOrderValue', 'MesPedido',
+                                             'IdadePedido', 'DiasParaEntrega',
+                                             'carga_fornecedor'],
+                                    transformer=SimpleImputer(add_indicator=False,
+                                                              copy=True,
+                                                              fill_value=None,
+                                                              keep_empty_features=False,
+                                                              missing_values=nan,
+                                                              strategy='mean'))),
+                ('categorical_imputer',
+                 Tran...
+                 ExtraTreesClassifier(bootstrap=False, ccp_alpha=0.0,
+                                      class_weight=None, criterion='gini',
+                                      max_depth=None, max_features='sqrt',
+                                      max_leaf_nodes=None, max_samples=None,
+                                      min_impurity_decrease=0.0,
+                                      min_samples_leaf=1, min_samples_split=2,
+                                      min_weight_fraction_leaf=0.0,
+                                      monotonic_cst=None, n_estimators=100,
+                                      n_jobs=-1, oob_score=False,
+                                      random_state=109, verbose=0,
+                                      warm_start=False))],
+         verbose=False)
+2025-07-09 14:23:51,790:INFO:save_model() successfully completed......................................
+2025-07-09 14:24:02,289:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-07-09 14:24:02,297:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-07-09 14:24:02,298:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-07-09 14:24:02,298:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-07-09 14:24:53,605:INFO:Initializing load_model()
+2025-07-09 14:24:53,605:INFO:load_model(model_name=S:\Procurement\FUP\IRF - Índice de Risco de Fornecedores\Modelo de Machine Learning\modelo_treinado_teste_anual, platform=None, authentication=None, verbose=True)
+2025-07-09 14:25:02,194:INFO:Initializing predict_model()
+2025-07-09 14:25:02,194:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000002208AB87E50>, estimator=Pipeline(memory=Memory(location=None),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['NetOrderValue', 'MesPedido',
+                                             'IdadePedido', 'DiasParaEntrega',
+                                             'carga_fornecedor'],
+                                    transformer=SimpleImputer())),
+                ('categorical_imputer',
+                 TransformerWrapper(include=['MATKL', 'Vendor'],
+                                    transformer=SimpleImputer(strategy='most_frequent'))),
+                ('rest_encoding',
+                 Transf...per(include=['MATKL', 'Vendor'],
+                                    transformer=TargetEncoder(cols=['MATKL',
+                                                                    'Vendor'],
+                                                              handle_missing='return_nan'))),
+                ('balance',
+                 TransformerWrapper(transformer=FixImbalancer(estimator=SMOTE(random_state=109)))),
+                ('clean_column_names',
+                 TransformerWrapper(transformer=CleanColumnNames())),
+                ('actual_estimator',
+                 ExtraTreesClassifier(n_jobs=-1, random_state=109))]), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x000002208AD85EE0>)
+2025-07-09 14:25:02,194:INFO:Checking exceptions
+2025-07-09 14:25:02,194:INFO:Preloading libraries
+2025-07-09 14:25:02,194:INFO:Set up data.
+2025-07-09 14:25:02,218:INFO:Set up index.
+2025-07-09 15:08:25,222:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-07-09 15:08:25,226:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-07-09 15:08:25,226:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-07-09 15:08:25,226:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-07-09 15:09:20,331:WARNING:C:\Users\CSUGAB01\OneDrive - ANDRITZ AG\Documents\Python\IRF - Teste Base OTP\modelo_irf.py:118: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.
+  df_events.groupby('Vendor')['start'].cumsum() - df_events.groupby('Vendor')['end'].cumsum()
+
+2025-07-09 15:09:29,532:INFO:PyCaret ClassificationExperiment
+2025-07-09 15:09:29,532:INFO:Logging name: clf-default-name
+2025-07-09 15:09:29,532:INFO:ML Usecase: MLUsecase.CLASSIFICATION
+2025-07-09 15:09:29,532:INFO:version 3.3.2
+2025-07-09 15:09:29,532:INFO:Initializing setup()
+2025-07-09 15:09:29,532:INFO:self.USI: 0605
+2025-07-09 15:09:29,532:INFO:self._variable_keys: {'gpu_param', 'data', 'html_param', 'memory', 'gpu_n_jobs_param', 'USI', 'y_train', 'y', 'fold_shuffle_param', 'idx', '_available_plots', 'X', 'target_param', 'X_test', 'seed', 'exp_id', 'pipeline', 'exp_name_log', 'n_jobs_param', 'log_plots_param', '_ml_usecase', 'fold_generator', 'fold_groups_param', 'fix_imbalance', 'X_train', 'logging_param', 'is_multiclass', 'y_test'}
+2025-07-09 15:09:29,532:INFO:Checking environment
+2025-07-09 15:09:29,532:INFO:python_version: 3.11.9
+2025-07-09 15:09:29,537:INFO:python_build: ('tags/v3.11.9:de54cf5', 'Apr  2 2024 10:12:12')
+2025-07-09 15:09:29,537:INFO:machine: AMD64
+2025-07-09 15:09:29,567:INFO:platform: Windows-10-10.0.22631-SP0
+2025-07-09 15:09:29,576:INFO:Memory: svmem(total=16844595200, available=1196634112, percent=92.9, used=15647961088, free=1196634112)
+2025-07-09 15:09:29,576:INFO:Physical Core: 4
+2025-07-09 15:09:29,576:INFO:Logical Core: 8
+2025-07-09 15:09:29,579:INFO:Checking libraries
+2025-07-09 15:09:29,580:INFO:System:
+2025-07-09 15:09:29,580:INFO:    python: 3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]
+2025-07-09 15:09:29,580:INFO:executable: C:\Users\CSUGAB01\OneDrive - ANDRITZ AG\Documents\Python\IRF - Teste Base OTP\.venv\Scripts\python.exe
+2025-07-09 15:09:29,580:INFO:   machine: Windows-10-10.0.22631-SP0
+2025-07-09 15:09:29,580:INFO:PyCaret required dependencies:
+2025-07-09 15:09:29,635:INFO:                 pip: 25.1.1
+2025-07-09 15:09:29,635:INFO:          setuptools: 65.5.0
+2025-07-09 15:09:29,635:INFO:             pycaret: 3.3.2
+2025-07-09 15:09:29,636:INFO:             IPython: 9.3.0
+2025-07-09 15:09:29,636:INFO:          ipywidgets: 8.1.7
+2025-07-09 15:09:29,636:INFO:                tqdm: 4.67.1
+2025-07-09 15:09:29,636:INFO:               numpy: 1.26.4
+2025-07-09 15:09:29,637:INFO:              pandas: 2.1.4
+2025-07-09 15:09:29,637:INFO:              jinja2: 3.1.6
+2025-07-09 15:09:29,637:INFO:               scipy: 1.11.4
+2025-07-09 15:09:29,637:INFO:              joblib: 1.3.2
+2025-07-09 15:09:29,637:INFO:             sklearn: 1.4.2
+2025-07-09 15:09:29,637:INFO:                pyod: 2.0.5
+2025-07-09 15:09:29,637:INFO:            imblearn: 0.13.0
+2025-07-09 15:09:29,637:INFO:   category_encoders: 2.7.0
+2025-07-09 15:09:29,637:INFO:            lightgbm: 4.6.0
+2025-07-09 15:09:29,637:INFO:               numba: 0.61.2
+2025-07-09 15:09:29,637:INFO:            requests: 2.32.4
+2025-07-09 15:09:29,637:INFO:          matplotlib: 3.7.5
+2025-07-09 15:09:29,637:INFO:          scikitplot: 0.3.7
+2025-07-09 15:09:29,637:INFO:         yellowbrick: 1.5
+2025-07-09 15:09:29,637:INFO:              plotly: 5.24.1
+2025-07-09 15:09:29,637:INFO:    plotly-resampler: Not installed
+2025-07-09 15:09:29,637:INFO:             kaleido: 1.0.0
+2025-07-09 15:09:29,637:INFO:           schemdraw: 0.15
+2025-07-09 15:09:29,637:INFO:         statsmodels: 0.14.4
+2025-07-09 15:09:29,637:INFO:              sktime: 0.26.0
+2025-07-09 15:09:29,637:INFO:               tbats: 1.1.3
+2025-07-09 15:09:29,637:INFO:            pmdarima: 2.0.4
+2025-07-09 15:09:29,638:INFO:              psutil: 7.0.0
+2025-07-09 15:09:29,638:INFO:          markupsafe: 3.0.2
+2025-07-09 15:09:29,638:INFO:             pickle5: Not installed
+2025-07-09 15:09:29,638:INFO:         cloudpickle: 3.1.1
+2025-07-09 15:09:29,638:INFO:         deprecation: 2.1.0
+2025-07-09 15:09:29,638:INFO:              xxhash: 3.5.0
+2025-07-09 15:09:29,638:INFO:           wurlitzer: Not installed
+2025-07-09 15:09:29,638:INFO:PyCaret optional dependencies:
+2025-07-09 15:09:29,646:INFO:                shap: Not installed
+2025-07-09 15:09:29,646:INFO:           interpret: Not installed
+2025-07-09 15:09:29,646:INFO:                umap: Not installed
+2025-07-09 15:09:29,646:INFO:     ydata_profiling: Not installed
+2025-07-09 15:09:29,646:INFO:  explainerdashboard: Not installed
+2025-07-09 15:09:29,646:INFO:             autoviz: Not installed
+2025-07-09 15:09:29,646:INFO:           fairlearn: Not installed
+2025-07-09 15:09:29,646:INFO:          deepchecks: Not installed
+2025-07-09 15:09:29,646:INFO:             xgboost: Not installed
+2025-07-09 15:09:29,646:INFO:            catboost: Not installed
+2025-07-09 15:09:29,646:INFO:              kmodes: Not installed
+2025-07-09 15:09:29,646:INFO:             mlxtend: Not installed
+2025-07-09 15:09:29,646:INFO:       statsforecast: Not installed
+2025-07-09 15:09:29,646:INFO:        tune_sklearn: Not installed
+2025-07-09 15:09:29,646:INFO:                 ray: Not installed
+2025-07-09 15:09:29,646:INFO:            hyperopt: Not installed
+2025-07-09 15:09:29,646:INFO:              optuna: Not installed
+2025-07-09 15:09:29,646:INFO:               skopt: Not installed
+2025-07-09 15:09:29,646:INFO:              mlflow: Not installed
+2025-07-09 15:09:29,646:INFO:              gradio: Not installed
+2025-07-09 15:09:29,646:INFO:             fastapi: Not installed
+2025-07-09 15:09:29,646:INFO:             uvicorn: Not installed
+2025-07-09 15:09:29,646:INFO:              m2cgen: Not installed
+2025-07-09 15:09:29,651:INFO:           evidently: Not installed
+2025-07-09 15:09:29,651:INFO:               fugue: Not installed
+2025-07-09 15:09:29,651:INFO:           streamlit: Not installed
+2025-07-09 15:09:29,651:INFO:             prophet: Not installed
+2025-07-09 15:09:29,651:INFO:None
+2025-07-09 15:09:29,651:INFO:Set up data.
+2025-07-09 15:09:29,651:INFO:Set up folding strategy.
+2025-07-09 15:09:29,651:INFO:Set up train/test split.
+2025-07-09 15:09:29,665:INFO:Set up index.
+2025-07-09 15:09:29,665:INFO:Assigning column types.
+2025-07-09 15:09:29,676:INFO:Engine successfully changes for model 'lr' to 'sklearn'.
+2025-07-09 15:09:29,712:INFO:Engine for model 'knn' has not been set explicitly, hence returning None.
+2025-07-09 15:09:29,724:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2025-07-09 15:09:29,803:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-07-09 15:09:29,807:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-07-09 15:09:29,889:INFO:Engine for model 'knn' has not been set explicitly, hence returning None.
+2025-07-09 15:09:29,889:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2025-07-09 15:09:29,916:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-07-09 15:09:29,916:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-07-09 15:09:29,916:INFO:Engine successfully changes for model 'knn' to 'sklearn'.
+2025-07-09 15:09:29,981:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2025-07-09 15:09:30,036:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-07-09 15:09:30,036:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-07-09 15:09:30,121:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2025-07-09 15:09:30,162:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-07-09 15:09:30,162:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-07-09 15:09:30,162:INFO:Engine successfully changes for model 'rbfsvm' to 'sklearn'.
+2025-07-09 15:09:30,267:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-07-09 15:09:30,267:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-07-09 15:09:30,397:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-07-09 15:09:30,397:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-07-09 15:09:30,399:INFO:Preparing preprocessing pipeline...
+2025-07-09 15:09:30,399:INFO:Set up simple imputation.
+2025-07-09 15:09:30,408:INFO:Set up encoding of categorical features.
+2025-07-09 15:09:30,408:INFO:Set up imbalanced handling.
+2025-07-09 15:09:30,408:INFO:Set up column name cleaning.
+2025-07-09 15:09:30,601:INFO:Finished creating preprocessing pipeline.
+2025-07-09 15:09:30,614:INFO:Pipeline: Pipeline(memory=FastMemory(location=C:\Users\CSUGAB01\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(exclude=None,
+                                    include=['NetOrderValue', 'MesPedido',
+                                             'IdadePedido', 'DiasParaEntrega',
+                                             'carga_fornecedor'],
+                                    transformer=SimpleImputer(add_indicator=False,
+                                                              copy=True,
+                                                              fill_value=None,
+                                                              keep_empty_features=False,
+                                                              missing_values=nan,
+                                                              str...
+                                                              min_samples_leaf=20,
+                                                              return_df=True,
+                                                              smoothing=10,
+                                                              verbose=0))),
+                ('balance',
+                 TransformerWrapper(exclude=None, include=None,
+                                    transformer=FixImbalancer(estimator=SMOTE(k_neighbors=5,
+                                                                              random_state=109,
+                                                                              sampling_strategy='auto')))),
+                ('clean_column_names',
+                 TransformerWrapper(exclude=None, include=None,
+                                    transformer=CleanColumnNames(match='[\\]\\[\\,\\{\\}\\"\\:]+')))],
+         verbose=False)
+2025-07-09 15:09:30,623:INFO:Creating final display dataframe.
+2025-07-09 15:09:31,152:INFO:Setup _display_container:                     Description             Value
+0                    Session id               109
+1                        Target           On Time
+2                   Target type            Binary
+3           Original data shape        (35911, 8)
+4        Transformed data shape        (53794, 8)
+5   Transformed train set shape        (43020, 8)
+6    Transformed test set shape        (10774, 8)
+7              Numeric features                 5
+8          Categorical features                 2
+9                    Preprocess              True
+10              Imputation type            simple
+11           Numeric imputation              mean
+12       Categorical imputation              mode
+13     Maximum one-hot encoding                25
+14              Encoding method              None
+15                Fix imbalance              True
+16         Fix imbalance method             SMOTE
+17               Fold Generator   StratifiedKFold
+18                  Fold Number                10
+19                     CPU Jobs                -1
+20                      Use GPU             False
+21               Log Experiment             False
+22              Experiment Name  clf-default-name
+23                          USI              0605
+2025-07-09 15:09:31,285:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-07-09 15:09:31,285:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-07-09 15:09:31,361:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-07-09 15:09:31,361:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-07-09 15:09:31,361:INFO:setup() successfully completed in 1.87s...............
+2025-07-09 15:09:31,361:INFO:Initializing create_model()
+2025-07-09 15:09:31,361:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001C7CD491650>, estimator=et, fold=None, round=4, cross_validation=True, predict=True, fit_kwargs=None, groups=None, refit=True, probability_threshold=None, experiment_custom_tags=None, verbose=True, system=True, add_to_model_list=True, metrics=None, display=None, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2025-07-09 15:09:31,361:INFO:Checking exceptions
+2025-07-09 15:09:31,370:INFO:Importing libraries
+2025-07-09 15:09:31,377:INFO:Copying training dataset
+2025-07-09 15:09:31,393:INFO:Defining folds
+2025-07-09 15:09:31,393:INFO:Declaring metric variables
+2025-07-09 15:09:31,393:INFO:Importing untrained model
+2025-07-09 15:09:31,393:INFO:Extra Trees Classifier Imported successfully
+2025-07-09 15:09:31,393:INFO:Starting cross validation
+2025-07-09 15:09:31,393:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2025-07-09 15:10:12,781:INFO:Calculating mean and std
+2025-07-09 15:10:12,789:INFO:Creating metrics dataframe
+2025-07-09 15:10:12,798:INFO:Finalizing model
+2025-07-09 15:10:14,422:INFO:Uploading results into container
+2025-07-09 15:10:14,427:INFO:Uploading model into container now
+2025-07-09 15:10:14,451:INFO:_master_model_container: 1
+2025-07-09 15:10:14,461:INFO:_display_container: 2
+2025-07-09 15:10:14,462:INFO:ExtraTreesClassifier(bootstrap=False, ccp_alpha=0.0, class_weight=None,
+                     criterion='gini', max_depth=None, max_features='sqrt',
+                     max_leaf_nodes=None, max_samples=None,
+                     min_impurity_decrease=0.0, min_samples_leaf=1,
+                     min_samples_split=2, min_weight_fraction_leaf=0.0,
+                     monotonic_cst=None, n_estimators=100, n_jobs=-1,
+                     oob_score=False, random_state=109, verbose=0,
+                     warm_start=False)
+2025-07-09 15:10:14,462:INFO:create_model() successfully completed......................................
+2025-07-09 15:10:14,752:INFO:Initializing finalize_model()
+2025-07-09 15:10:14,757:INFO:finalize_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001C7CD491650>, estimator=ExtraTreesClassifier(bootstrap=False, ccp_alpha=0.0, class_weight=None,
+                     criterion='gini', max_depth=None, max_features='sqrt',
+                     max_leaf_nodes=None, max_samples=None,
+                     min_impurity_decrease=0.0, min_samples_leaf=1,
+                     min_samples_split=2, min_weight_fraction_leaf=0.0,
+                     monotonic_cst=None, n_estimators=100, n_jobs=-1,
+                     oob_score=False, random_state=109, verbose=0,
+                     warm_start=False), fit_kwargs=None, groups=None, model_only=False, experiment_custom_tags=None)
+2025-07-09 15:10:14,761:INFO:Finalizing ExtraTreesClassifier(bootstrap=False, ccp_alpha=0.0, class_weight=None,
+                     criterion='gini', max_depth=None, max_features='sqrt',
+                     max_leaf_nodes=None, max_samples=None,
+                     min_impurity_decrease=0.0, min_samples_leaf=1,
+                     min_samples_split=2, min_weight_fraction_leaf=0.0,
+                     monotonic_cst=None, n_estimators=100, n_jobs=-1,
+                     oob_score=False, random_state=109, verbose=0,
+                     warm_start=False)
+2025-07-09 15:10:14,763:INFO:Initializing create_model()
+2025-07-09 15:10:14,763:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001C7CD491650>, estimator=ExtraTreesClassifier(bootstrap=False, ccp_alpha=0.0, class_weight=None,
+                     criterion='gini', max_depth=None, max_features='sqrt',
+                     max_leaf_nodes=None, max_samples=None,
+                     min_impurity_decrease=0.0, min_samples_leaf=1,
+                     min_samples_split=2, min_weight_fraction_leaf=0.0,
+                     monotonic_cst=None, n_estimators=100, n_jobs=-1,
+                     oob_score=False, random_state=109, verbose=0,
+                     warm_start=False), fold=None, round=4, cross_validation=False, predict=False, fit_kwargs={}, groups=None, refit=True, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=False, metrics=None, display=None, model_only=False, return_train_score=False, error_score=0.0, kwargs={})
+2025-07-09 15:10:14,773:INFO:Checking exceptions
+2025-07-09 15:10:14,775:INFO:Importing libraries
+2025-07-09 15:10:14,775:INFO:Copying training dataset
+2025-07-09 15:10:14,776:INFO:Defining folds
+2025-07-09 15:10:14,776:INFO:Declaring metric variables
+2025-07-09 15:10:14,777:INFO:Importing untrained model
+2025-07-09 15:10:14,777:INFO:Declaring custom model
+2025-07-09 15:10:14,778:INFO:Extra Trees Classifier Imported successfully
+2025-07-09 15:10:14,781:INFO:Cross validation set to False
+2025-07-09 15:10:14,781:INFO:Fitting Model
+2025-07-09 15:10:16,947:INFO:Pipeline(memory=Memory(location=None),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(exclude=None,
+                                    include=['NetOrderValue', 'MesPedido',
+                                             'IdadePedido', 'DiasParaEntrega',
+                                             'carga_fornecedor'],
+                                    transformer=SimpleImputer(add_indicator=False,
+                                                              copy=True,
+                                                              fill_value=None,
+                                                              keep_empty_features=False,
+                                                              missing_values=nan,
+                                                              strategy='mean'))),
+                ('categorical_imputer',
+                 Tran...
+                 ExtraTreesClassifier(bootstrap=False, ccp_alpha=0.0,
+                                      class_weight=None, criterion='gini',
+                                      max_depth=None, max_features='sqrt',
+                                      max_leaf_nodes=None, max_samples=None,
+                                      min_impurity_decrease=0.0,
+                                      min_samples_leaf=1, min_samples_split=2,
+                                      min_weight_fraction_leaf=0.0,
+                                      monotonic_cst=None, n_estimators=100,
+                                      n_jobs=-1, oob_score=False,
+                                      random_state=109, verbose=0,
+                                      warm_start=False))],
+         verbose=False)
+2025-07-09 15:10:16,947:INFO:create_model() successfully completed......................................
+2025-07-09 15:10:17,082:INFO:_master_model_container: 1
+2025-07-09 15:10:17,082:INFO:_display_container: 2
+2025-07-09 15:10:17,101:INFO:Pipeline(memory=Memory(location=None),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(exclude=None,
+                                    include=['NetOrderValue', 'MesPedido',
+                                             'IdadePedido', 'DiasParaEntrega',
+                                             'carga_fornecedor'],
+                                    transformer=SimpleImputer(add_indicator=False,
+                                                              copy=True,
+                                                              fill_value=None,
+                                                              keep_empty_features=False,
+                                                              missing_values=nan,
+                                                              strategy='mean'))),
+                ('categorical_imputer',
+                 Tran...
+                 ExtraTreesClassifier(bootstrap=False, ccp_alpha=0.0,
+                                      class_weight=None, criterion='gini',
+                                      max_depth=None, max_features='sqrt',
+                                      max_leaf_nodes=None, max_samples=None,
+                                      min_impurity_decrease=0.0,
+                                      min_samples_leaf=1, min_samples_split=2,
+                                      min_weight_fraction_leaf=0.0,
+                                      monotonic_cst=None, n_estimators=100,
+                                      n_jobs=-1, oob_score=False,
+                                      random_state=109, verbose=0,
+                                      warm_start=False))],
+         verbose=False)
+2025-07-09 15:10:17,101:INFO:finalize_model() successfully completed......................................
+2025-07-09 15:10:17,306:INFO:Initializing save_model()
+2025-07-09 15:10:17,306:INFO:save_model(model=Pipeline(memory=Memory(location=None),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(exclude=None,
+                                    include=['NetOrderValue', 'MesPedido',
+                                             'IdadePedido', 'DiasParaEntrega',
+                                             'carga_fornecedor'],
+                                    transformer=SimpleImputer(add_indicator=False,
+                                                              copy=True,
+                                                              fill_value=None,
+                                                              keep_empty_features=False,
+                                                              missing_values=nan,
+                                                              strategy='mean'))),
+                ('categorical_imputer',
+                 Tran...
+                 ExtraTreesClassifier(bootstrap=False, ccp_alpha=0.0,
+                                      class_weight=None, criterion='gini',
+                                      max_depth=None, max_features='sqrt',
+                                      max_leaf_nodes=None, max_samples=None,
+                                      min_impurity_decrease=0.0,
+                                      min_samples_leaf=1, min_samples_split=2,
+                                      min_weight_fraction_leaf=0.0,
+                                      monotonic_cst=None, n_estimators=100,
+                                      n_jobs=-1, oob_score=False,
+                                      random_state=109, verbose=0,
+                                      warm_start=False))],
+         verbose=False), model_name=S:\Procurement\FUP\IRF - Índice de Risco de Fornecedores\Modelo de Machine Learning\modelo_treinado_teste_anual, prep_pipe_=Pipeline(memory=FastMemory(location=C:\Users\CSUGAB01\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(exclude=None,
+                                    include=['NetOrderValue', 'MesPedido',
+                                             'IdadePedido', 'DiasParaEntrega',
+                                             'carga_fornecedor'],
+                                    transformer=SimpleImputer(add_indicator=False,
+                                                              copy=True,
+                                                              fill_value=None,
+                                                              keep_empty_features=False,
+                                                              missing_values=nan,
+                                                              str...
+                                                              min_samples_leaf=20,
+                                                              return_df=True,
+                                                              smoothing=10,
+                                                              verbose=0))),
+                ('balance',
+                 TransformerWrapper(exclude=None, include=None,
+                                    transformer=FixImbalancer(estimator=SMOTE(k_neighbors=5,
+                                                                              random_state=109,
+                                                                              sampling_strategy='auto')))),
+                ('clean_column_names',
+                 TransformerWrapper(exclude=None, include=None,
+                                    transformer=CleanColumnNames(match='[\\]\\[\\,\\{\\}\\"\\:]+')))],
+         verbose=False), verbose=True, use_case=MLUsecase.CLASSIFICATION, kwargs={})
+2025-07-09 15:10:17,307:INFO:Adding model into prep_pipe
+2025-07-09 15:10:17,307:WARNING:Only Model saved as it was a pipeline.
+2025-07-09 15:10:25,052:INFO:S:\Procurement\FUP\IRF - Índice de Risco de Fornecedores\Modelo de Machine Learning\modelo_treinado_teste_anual.pkl saved in current working directory
+2025-07-09 15:10:25,067:INFO:Pipeline(memory=Memory(location=None),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(exclude=None,
+                                    include=['NetOrderValue', 'MesPedido',
+                                             'IdadePedido', 'DiasParaEntrega',
+                                             'carga_fornecedor'],
+                                    transformer=SimpleImputer(add_indicator=False,
+                                                              copy=True,
+                                                              fill_value=None,
+                                                              keep_empty_features=False,
+                                                              missing_values=nan,
+                                                              strategy='mean'))),
+                ('categorical_imputer',
+                 Tran...
+                 ExtraTreesClassifier(bootstrap=False, ccp_alpha=0.0,
+                                      class_weight=None, criterion='gini',
+                                      max_depth=None, max_features='sqrt',
+                                      max_leaf_nodes=None, max_samples=None,
+                                      min_impurity_decrease=0.0,
+                                      min_samples_leaf=1, min_samples_split=2,
+                                      min_weight_fraction_leaf=0.0,
+                                      monotonic_cst=None, n_estimators=100,
+                                      n_jobs=-1, oob_score=False,
+                                      random_state=109, verbose=0,
+                                      warm_start=False))],
+         verbose=False)
+2025-07-09 15:10:25,067:INFO:save_model() successfully completed......................................
+2025-07-09 15:10:34,365:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-07-09 15:10:34,370:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-07-09 15:10:34,371:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-07-09 15:10:34,371:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-07-09 15:11:43,709:INFO:Initializing load_model()
+2025-07-09 15:11:43,709:INFO:load_model(model_name=S:\Procurement\FUP\IRF - Índice de Risco de Fornecedores\Modelo de Machine Learning\modelo_treinado_teste_anual, platform=None, authentication=None, verbose=True)
+2025-07-09 15:11:52,488:INFO:Initializing predict_model()
+2025-07-09 15:11:52,490:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x00000222476BC210>, estimator=Pipeline(memory=Memory(location=None),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['NetOrderValue', 'MesPedido',
+                                             'IdadePedido', 'DiasParaEntrega',
+                                             'carga_fornecedor'],
+                                    transformer=SimpleImputer())),
+                ('categorical_imputer',
+                 TransformerWrapper(include=['MATKL', 'Vendor'],
+                                    transformer=SimpleImputer(strategy='most_frequent'))),
+                ('rest_encoding',
+                 Transf...per(include=['MATKL', 'Vendor'],
+                                    transformer=TargetEncoder(cols=['MATKL',
+                                                                    'Vendor'],
+                                                              handle_missing='return_nan'))),
+                ('balance',
+                 TransformerWrapper(transformer=FixImbalancer(estimator=SMOTE(random_state=109)))),
+                ('clean_column_names',
+                 TransformerWrapper(transformer=CleanColumnNames())),
+                ('actual_estimator',
+                 ExtraTreesClassifier(n_jobs=-1, random_state=109))]), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x0000022247915EE0>)
+2025-07-09 15:11:52,490:INFO:Checking exceptions
+2025-07-09 15:11:52,490:INFO:Preloading libraries
+2025-07-09 15:11:52,490:INFO:Set up data.
+2025-07-09 15:11:52,513:INFO:Set up index.
+2025-07-10 10:40:50,515:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-07-10 10:40:50,518:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-07-10 10:40:50,518:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-07-10 10:40:50,519:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-07-10 10:41:24,652:INFO:Initializing load_model()
+2025-07-10 10:41:24,653:INFO:load_model(model_name=S:\Procurement\FUP\IRF - Índice de Risco de Fornecedores\Modelo de Machine Learning\modelo_treinado_teste_carga_fornecedor, platform=None, authentication=None, verbose=True)
+2025-07-10 10:41:58,538:INFO:Initializing predict_model()
+2025-07-10 10:41:58,543:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x00000238BC2F7B90>, estimator=Pipeline(memory=Memory(location=None),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['NetOrderValue', 'MesPedido',
+                                             'IdadePedido', 'DiasParaEntrega',
+                                             'carga_fornecedor'],
+                                    transformer=SimpleImputer())),
+                ('categorical_imputer',
+                 TransformerWrapper(include=['MATKL', 'Vendor'],
+                                    transformer=SimpleImputer(strategy='most_frequent'))),
+                ('rest_encoding',
+                 Transf...per(include=['MATKL', 'Vendor'],
+                                    transformer=TargetEncoder(cols=['MATKL',
+                                                                    'Vendor'],
+                                                              handle_missing='return_nan'))),
+                ('balance',
+                 TransformerWrapper(transformer=FixImbalancer(estimator=SMOTE(random_state=109)))),
+                ('clean_column_names',
+                 TransformerWrapper(transformer=CleanColumnNames())),
+                ('actual_estimator',
+                 ExtraTreesClassifier(n_jobs=-1, random_state=109))]), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x00000238BE2C9F80>)
+2025-07-10 10:41:58,545:INFO:Checking exceptions
+2025-07-10 10:41:58,547:INFO:Preloading libraries
+2025-07-10 10:41:58,550:INFO:Set up data.
+2025-07-10 10:41:58,568:INFO:Set up index.
