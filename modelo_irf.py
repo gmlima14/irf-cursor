@@ -6,6 +6,8 @@
 import pandas as pd
 from pycaret.classification import *
 from datetime import datetime
+import numpy as np
+import matplotlib.pyplot as plt
 
 ARQUIVO_REDE = r'S:\Procurement\FUP\OTP Mensal\OTP - Base.xlsx'
 
@@ -34,9 +36,9 @@ def carregar_e_filtrar_dados(arquivo_rede):
     else:
         log_message("⚠️ Coluna 'Delivery Date' não encontrada no DataFrame")
     
-    # Filtra os registros cuja 'Delivery Date' seja de até 1 ano atrás em relação à data atual
+    # # Filtra os registros cuja 'Delivery Date' seja de até 1 ano atrás em relação à data atual
     data_limite = datetime.today() - pd.DateOffset(years=1)
-    df['Delivery Date'] = pd.to_datetime(df['Delivery Date'], errors='coerce')
+    # df['Delivery Date'] = pd.to_datetime(df['Delivery Date'], errors='coerce')
     df = df[df['Delivery Date'] >= data_limite].copy()
     
     # Manter apenas as colunas necessárias
@@ -61,19 +63,12 @@ def converter_datas_e_criar_variaveis_temporais(df):
     # Converter as colunas de data
     df["BEDAT"] = pd.to_datetime(df["BEDAT"], errors="coerce")  # Data de emissão
     df["Due Date (incl. ex works time)"] = pd.to_datetime(df["Due Date (incl. ex works time)"], errors="coerce")  # Entrega prevista
-    
-    # Criar variáveis temporais
-    hoje = datetime.today()
-    log_message(f"📅 Data de referência: {hoje.strftime('%d/%m/%Y')}")
-    
-    # Mês da emissão
-    df["MesPedido"] = df["BEDAT"].dt.month
-    
-    # Idade do pedido em dias
-    df["IdadePedido"] = (hoje - df["BEDAT"]).dt.days
-    
-    # Dias para a entrega
-    df["DiasParaEntrega"] = (df["Due Date (incl. ex works time)"] - df["BEDAT"]).dt.days
+
+    # Dias para a entrega (em dias úteis)
+    df["Dias Para Entrega"] = [
+        np.busday_count(bedat.date(), due_date.date()) if pd.notnull(bedat) and pd.notnull(due_date) else np.nan
+        for bedat, due_date in zip(df["BEDAT"], df["Due Date (incl. ex works time)"])
+    ]
     
     # Inverte a coluna On Time
     df['On Time'] = df['On Time'].replace({1: 0, 0: 1})
@@ -150,21 +145,50 @@ def treinar_e_salvar_modelo(df, caminho_salvamento):
     # Configura o experimento que será iniciado
     log_message("⚙️ Configurando experimento PyCaret...")
     s = setup(df, target='On Time', session_id=109, fix_imbalance=True)
-    
-    # Treina um modelo extra trees
-    log_message("🌳 Treinando modelo Extra Trees...")
-    s = create_model('et')
-    
-    # Finaliza o modelo tunado
-    log_message("🔧 Finalizando modelo...")
-    modelo_final = finalize_model(s)
-    
-    # Salvando o modelo
-    log_message(f"💾 Salvando modelo em: {caminho_salvamento}")
-    save_model(modelo_final, caminho_salvamento)
-    
-    log_message("✅ Modelo treinado e salvo com sucesso!")
-    return modelo_final
+
+    # Treina os três modelos
+    log_message("Treinando modelo XGBoost...")
+    modelo_xgb = create_model('xgboost')
+    log_message("Treinando modelo LightGBM...")
+    modelo_lgbm = create_model('lightgbm', verbose=False)
+    log_message("Treinando modelo CatBoost...")
+    modelo_cat = create_model('catboost')
+
+    # Tunando os modelos
+    log_message("🔧 Tunando modelo XGBoost...")
+    modelo_xgb_tunado = tune_model(modelo_xgb, optimize='MCC', n_iter=5)
+    log_message("🔧 Tunando modelo LightGBM...")
+    modelo_lgbm_tunado = tune_model(modelo_lgbm, optimize='MCC', n_iter=5, verbose=False)
+    log_message("🔧 Tunando modelo CatBoost...")
+    modelo_cat_tunado = tune_model(modelo_cat, optimize='MCC', n_iter=5)
+
+    # Plota a importância das variáveis para cada modelo
+    plot_model(modelo_xgb_tunado, plot='feature', save=True)
+    plot_model(modelo_lgbm_tunado, plot='feature', save=True)
+    plot_model(modelo_cat_tunado, plot='feature', save=True)
+
+    # Plota a matriz de confusão para cada modelo
+    plot_model(modelo_xgb_tunado, plot='confusion_matrix', save=True)
+    plot_model(modelo_lgbm_tunado, plot='confusion_matrix', save=True)
+    plot_model(modelo_cat_tunado, plot='confusion_matrix', save=True)
+
+    # Finaliza os modelos tunados
+    log_message("🔧 Finalizando modelos tunados...")
+    modelo_xgb_final = finalize_model(modelo_xgb_tunado)
+    modelo_lgbm_final = finalize_model(modelo_lgbm_tunado)
+    modelo_cat_final = finalize_model(modelo_cat_tunado)
+
+    # Faz o blend dos modelos
+    log_message("🤝 Fazendo blend dos modelos...")
+    modelo_blend = blend_models(estimator_list=[modelo_xgb_final, modelo_lgbm_final, modelo_cat_final], fold=5, optimize='MCC', choose_better=True, verbose=False)
+    modelo_blend_final = finalize_model(modelo_blend)
+
+    # Salvando o modelo blendado
+    log_message(f"💾 Salvando modelo blendado em: {caminho_salvamento}")
+    save_model(modelo_blend_final, caminho_salvamento)
+
+    log_message("✅ Modelo blendado treinado e salvo com sucesso!")
+    return modelo_blend_final
 
 def main():
     """
@@ -186,7 +210,7 @@ def main():
     df.to_excel(r'S:\Procurement\FUP\IRF - Índice de Risco de Fornecedores\Modelo de Machine Learning\dados_treinamento.xlsx', index=False)
     
     # Treinar e salvar modelo
-    modelo_final = treinar_e_salvar_modelo(df, r'S:\Procurement\FUP\IRF - Índice de Risco de Fornecedores\Modelo de Machine Learning\modelo_treinado_teste_anual')
+    modelo_final = treinar_e_salvar_modelo(df, r'S:\Procurement\FUP\IRF - Índice de Risco de Fornecedores\Modelo de Machine Learning\modelo_treinado_blend_ytd')
     
     log_message("=" * 60)
 

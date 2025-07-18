@@ -1,7 +1,7 @@
 """ # Importar as bibliotecas necessárias """
 
 # Importa o módulo de classificação do PyCaret
-from pycaret.classification import load_model, predict_model
+from pycaret.classification import load_model, predict_model, blend_models
 import pandas as pd
 from datetime import datetime
 from zoneinfo import ZoneInfo  # disponível a partir do Python 3.9
@@ -17,7 +17,7 @@ def log_message(message):
 
 # Caminhos dos arquivos da rede
 ARQUIVO_REDE = r'S:\Procurement\FUP\OTP Mensal\OTP - Base.xlsx'
-MODELO_REDE = r'S:\Procurement\FUP\IRF - Índice de Risco de Fornecedores\Modelo de Machine Learning\modelo_treinado_teste_carga_fornecedor.pkl'
+MODELO_BLEND = r'S:\Procurement\FUP\IRF - Índice de Risco de Fornecedores\Modelo de Machine Learning\modelo_treinado_lightgbm.pkl'
 
 def verificar_caminhos():
     """
@@ -37,13 +37,12 @@ def verificar_caminhos():
         return None
     
     # Verifica modelo
-    if os.path.exists(MODELO_REDE):
-        caminhos_disponiveis['modelo'] = MODELO_REDE
-        log_message(f"✅ Modelo encontrado na rede: {MODELO_REDE}")
+    if os.path.exists(MODELO_BLEND):
+        caminhos_disponiveis['modelo_blend'] = MODELO_BLEND
+        log_message(f"✅ Modelo blend encontrado na rede: {MODELO_BLEND}")
     else:
-        log_message(f"❌ Modelo não encontrado na rede: {MODELO_REDE}")
+        log_message(f"❌ Modelo blend não encontrado na rede: {MODELO_BLEND}")
         return None
-        
     return caminhos_disponiveis
 
 """# Lê o arquivo excel com os pedidos em aberto"""
@@ -134,7 +133,7 @@ def calcular_carga_fornecedor(df, salvar_csv=True, caminho_csv=r'S:\Procurement\
             df_events.groupby('Vendor')['start'].cumsum() - df_events.groupby('Vendor')['end'].cumsum()
         )
 
-        df_open = df_events[['Vendor', 'date', 'open_pedidos']].drop_duplicates(subset=['Vendor', 'date'])
+        df_open = df_events[['Vendor', 'date', 'open_pedidos']].drop_duplicates(subset=('Vendor', 'date'))
 
         df = pd.merge(df, df_open, left_on=['Vendor', 'BEDAT'], right_on=['Vendor', 'date'], how='left')
 
@@ -185,9 +184,7 @@ def processar_dados(df_pedidos_em_aberto):
     hoje = datetime.today()
 
     # Variáveis de tempo
-    df_pedidos_em_aberto["MesPedido"] = df_pedidos_em_aberto["BEDAT"].dt.month
-    df_pedidos_em_aberto["IdadePedido"] = (hoje - df_pedidos_em_aberto["BEDAT"]).dt.days
-    df_pedidos_em_aberto["DiasParaEntrega"] = (df_pedidos_em_aberto["Due Date (incl. ex works time)"] - df_pedidos_em_aberto["BEDAT"]).dt.days
+    df_pedidos_em_aberto["Dias Para Entrega"] = (df_pedidos_em_aberto["Due Date (incl. ex works time)"] - df_pedidos_em_aberto["BEDAT"]).dt.days
 
     # Conta a quantidade de pedidos em aberto por fornecedor
     pedidos_abertos_por_fornecedor = df_pedidos_em_aberto['Vendor'].value_counts()
@@ -197,7 +194,7 @@ def processar_dados(df_pedidos_em_aberto):
     
     return df_pedidos_em_aberto
 
-def carregar_modelo(caminhos):
+def carregar_modelo(caminho_modelo):
     """
     Carrega o modelo de machine learning treinado da rede.
     
@@ -208,12 +205,12 @@ def carregar_modelo(caminhos):
         object: Modelo carregado ou None se houver erro
     """
     try:
-        log_message(f"🤖 Carregando modelo de machine learning da rede...")
-        modelo = load_model(caminhos['modelo'].replace('.pkl', ''))
-        log_message(f"✅ Modelo carregado com sucesso!")
+        log_message(f"🤖 Carregando modelo blend da rede {caminho_modelo}...")
+        modelo = load_model(caminho_modelo.replace('.pkl', ''))
+        log_message(f"✅ Modelo blend carregado com sucesso! {caminho_modelo}")
         return modelo
     except Exception as e:
-        log_message(f"❌ Erro ao carregar modelo: {e}")
+        log_message(f"❌ Erro ao carregar modelo blend: {e}")
         return None
 
 def fazer_previsoes(modelo, df_pedidos_em_aberto):
@@ -254,7 +251,7 @@ def fazer_previsoes(modelo, df_pedidos_em_aberto):
         # Previsão normal para os que atendem ao critério
         df_predicao = df_pedidos_em_aberto[mask_predicao].copy()
         if not df_predicao.empty:
-            previsoes_predicao = predict_model(modelo, data=df_predicao)
+            previsoes_predicao = predict_model(modelo, data=df_predicao, verbose=False)
         else:
             previsoes_predicao = pd.DataFrame()
 
@@ -297,11 +294,8 @@ def fazer_previsoes(modelo, df_pedidos_em_aberto):
             "Due Date (incl. ex works time)": "Stat. Del. Date",
             "Material Text (AST or Short Text)": "Descrição do Item",
             "Vendor Name": "Fornecedor",
-            "MATKL": "Material Number",
+            "MATKL": "Material Group",
             "NetOrderValue": "Valor Net",
-            "MesPedido": "Mês do Pedido",
-            "IdadePedido": "Idade do Pedido",
-            "DiasParaEntrega": "Dias para Entrega",
         }, inplace=True)
 
         # Altera os valores de 0 e 1
@@ -502,7 +496,7 @@ def main():
         log_message("\n❌ Não foi possível encontrar todos os arquivos necessários na rede")
         log_message("   Verifique se você tem acesso aos seguintes caminhos:")
         log_message(f"   - {ARQUIVO_REDE}")
-        log_message(f"   - {MODELO_REDE}")
+        log_message(f"   - {MODELO_BLEND}")
         return
     
     # Carrega dados (corrigido para evitar erro de desempacotamento)
@@ -516,22 +510,18 @@ def main():
     if df_pedidos_em_aberto is None:
         return
     
-    # Carrega modelo
-    modelo = carregar_modelo(caminhos)
-    if modelo is None:
+    # Carrega modelo de ML
+    modelo_blend = carregar_modelo(caminhos['modelo_blend'])
+    if modelo_blend is None:
         return
     
     # Carrega funcao de calcular_carga_fornecedor
-    if df_entregue is not None and not df_entregue.empty:
-        df_carga = calcular_carga_fornecedor(df_entregue)
-    else:
-        log_message("❌ df_entregue está vazio ou None. Não é possível calcular a carga do fornecedor.")
-        return
+    df_carga = calcular_carga_fornecedor(df_entregue)
     if df_carga is None:
         return
     
     # Faz previsões
-    previsoes = fazer_previsoes(modelo, df_pedidos_em_aberto)
+    previsoes = fazer_previsoes(modelo_blend, df_pedidos_em_aberto)
     if previsoes is None:
         return
     

@@ -8,9 +8,6 @@ set "start_time=%time%"
 echo Atualizando planilha...
 python atualizar_planilha.py
 
-echo Atualizando modelo...
-python modelo_irf.py
-
 echo Executando previsao de atrasos...
 python irf.py
 
