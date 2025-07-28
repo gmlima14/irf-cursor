@@ -1,6 +1,7 @@
 """ # Importar as bibliotecas necessárias """
 
 # Importa o módulo de classificação do PyCaret
+from re import A
 from pycaret.classification import load_model, predict_model, blend_models
 import pandas as pd
 from datetime import datetime
@@ -17,7 +18,7 @@ def log_message(message):
 
 # Caminhos dos arquivos da rede
 ARQUIVO_REDE = r'S:\Procurement\FUP\OTP Mensal\OTP - Base.xlsx'
-MODELO_BLEND = r'S:\Procurement\FUP\IRF - Índice de Risco de Fornecedores\Modelo de Machine Learning\modelo_treinado_lightgbm.pkl'
+MODELO_BLEND = r'S:\Procurement\FUP\IRF - Índice de Risco de Fornecedores\Modelo de Machine Learning\Modelos\modelo_treinado_lightgbm.pkl'
 
 def verificar_caminhos():
     """
@@ -286,7 +287,7 @@ def fazer_previsoes(modelo, df_pedidos_em_aberto):
         # Renomeia as colunas
         previsoes.rename(columns={
             "prediction_label": "Previsão",
-            "prediction_score": "Confiabilidade",
+            "prediction_score": "Precisão",
             "carga_fornecedor": "Carga do Fornecedor",
             "EBELN": "PO",
             "EBELP": "Item",
@@ -307,151 +308,18 @@ def fazer_previsoes(modelo, df_pedidos_em_aberto):
         log_message(f"❌ Erro ao fazer previsões: {e}")
         return None
 
-"""# Matriz de Fornecedores"""
-
-def criar_matriz_fornecedores(previsoes, df_carga, caminhos):
-    """
-    Cria a matriz de fornecedores com cálculo do índice de risco.
-    
-    Args:
-        previsoes (pandas.DataFrame): DataFrame com previsões
-        df_carga (pandas.DataFrame): DataFrame com carga de fornecedores já calculada
-        caminhos (dict): Dicionário com os caminhos dos arquivos
-        
-    Returns:
-        pandas.DataFrame: DataFrame com matriz de fornecedores e índice de risco ou None se houver erro
-    """
-    if previsoes is None or df_carga is None:
-        return None
-    
-    try:
-        log_message("📊 Criando matriz de fornecedores...")
-        
-        # 1. Agrupar previsões por fornecedor
-        agrupado = previsoes.groupby('Vendor').agg(
-            pedidos_no_prazo=('Previsão', lambda x: (x == 'No Prazo').sum()),
-            pedidos_atrasados=('Previsão', lambda x: (x == 'Atraso').sum()),
-            total_pedidos=('Previsão', 'count'),
-            confiabilidade_media=('Confiabilidade', 'mean'),
-            valor_total=('Valor Net', 'sum'),
-            valor_atrasado=('Valor Net', lambda x: (x[previsoes.loc[x.index, 'Previsão'] == 'Atraso']).sum()),
-            valor_no_prazo=('Valor Net', lambda x: (x[previsoes.loc[x.index, 'Previsão'] == 'No Prazo']).sum()),
-            fornecedor=('Fornecedor', 'first')
-        ).reset_index()
-
-        # Ajusta o valor total para float64
-        agrupado['valor_total'] = agrupado['valor_total'].astype(float)
-
-        # Renomeia a coluna no df_carga para carga_media, se necessário
-        if 'carga_fornecedor' in df_carga.columns and 'carga_media' not in df_carga.columns:
-            df_carga = df_carga.rename(columns={'carga_fornecedor': 'carga_media'})
-
-        # Faz o merge com o DataFrame de carga de fornecedores
-        agrupado = agrupado.merge(df_carga[['Vendor', 'carga_media']], on='Vendor', how='left')
-
-        # Calcular taxa de atraso
-        agrupado['taxa_no_prazo'] = agrupado['pedidos_no_prazo'] / agrupado['total_pedidos']
-
-        # Calcular taxa de valor
-        agrupado['taxa_valor'] = agrupado['valor_no_prazo'] / agrupado['valor_total']
-
-        # Calcula a taxa de carga conforme as regras
-        def calcular_taxa_carga(row):
-            """
-            Calcula a taxa de carga do fornecedor baseada na carga média.
-            
-            Args:
-                row: Linha do DataFrame com carga_media e total_pedidos
-                
-            Returns:
-                float: Taxa de carga calculada
-            """
-            carga_media = row['carga_media']
-            total_pedidos = row['total_pedidos']
-
-            if pd.isna(carga_media) or carga_media <= 2:
-                return 1
-            taxa = total_pedidos / carga_media
-            return min(max(taxa, 1), 1.5)
-
-        agrupado['taxa_carga'] = agrupado.apply(calcular_taxa_carga, axis=1)
-
-        # Índice de risco bruto = taxa de atraso × confiabilidade
-        agrupado['indice_bruto'] = agrupado['taxa_no_prazo'] * agrupado['confiabilidade_media'] * agrupado['taxa_valor'] / agrupado['taxa_carga']
-
-        # Normalizar
-        agrupado['indice_risco'] = (1 - agrupado['indice_bruto'])*100
-
-        # Arredonda para 2 casas
-        agrupado = agrupado.round(2)
-
-        # Arredonda a carga media para zero cargas decimais e transforma em int
-        agrupado['carga_media'] = agrupado['carga_media'].apply(lambda x: int(x) if x >= 1 else 0)
-
-        # Renomear para deixar claro
-        df_fornecedores = agrupado[[
-            'fornecedor', 'Vendor', 'pedidos_no_prazo', 'pedidos_atrasados', 'taxa_no_prazo',
-            'total_pedidos', 'carga_media', 'taxa_carga',  'valor_total', 'taxa_valor', 'confiabilidade_media',  'indice_risco'
-        ]]
-
-        # Ordena por indice de risco
-        df_fornecedores = df_fornecedores.sort_values('indice_risco', ascending=False).reset_index(drop=True)
-        df_fornecedores['Ranking'] = df_fornecedores.index + 1
-
-        # Altera a coluna Ranking para a primeira coluna
-        primeira_coluna = df_fornecedores.pop('Ranking')
-        df_fornecedores.insert(0, 'Ranking', primeira_coluna)
-
-        # Renomeia as colunas do df
-        df_fornecedores = df_fornecedores.rename(columns={
-            'fornecedor': 'Fornecedor',
-            'pedidos_no_prazo': 'PO previstas no prazo',
-            'pedidos_atrasados': 'PO previstas atrasadas',
-            'taxa_no_prazo': 'Taxa de PO previstas no prazo',
-            'total_pedidos': 'Total de PO',
-            'carga_media': 'Carga Média de PO',
-            'taxa_carga': 'Taxa de Carga',
-            'valor_total': 'Valor NET de PO',
-            'taxa_valor': 'Taxa de Valor previsto no prazo',
-            'indice_risco': 'Índice de Risco',
-            'confiabilidade_media': 'Confiabilidade Média'
-        })
-        
-        # Adiciona a coluna de classificação de risco de acordo com o índice de risco
-        def classificar_risco(indice):
-            if indice >= 80:
-                return "Crítico"
-            elif indice >= 60:
-                return "Alerta"
-            elif indice >= 40:
-                return "Médio"
-            else:
-                return "Confiável"
-
-        df_fornecedores['Classificação de Risco'] = df_fornecedores['Índice de Risco'].apply(classificar_risco)
-        
-        log_message("✅ Matriz de fornecedores criada!")
-        return df_fornecedores
-    except Exception as e:
-        log_message(f"❌ Erro ao criar matriz de fornecedores: {e}")
-        return None
-
 """# Download do arquivo"""
 
-def salvar_resultados(df_fornecedores, previsoes):
+def salvar_resultados(previsoes):
     """
     Salva os resultados em arquivo Excel na pasta de histórico da rede.
     
     Args:
-        df_fornecedores (pandas.DataFrame): DataFrame com matriz de fornecedores
         previsoes (pandas.DataFrame): DataFrame com previsões detalhadas
         
     Returns:
         bool: True se salvou com sucesso, False caso contrário
-    """
-    if df_fornecedores is None or previsoes is None:
-        return False
-    
+    """    
     try:
         # Data e hora no fuso de Brasília (GMT-3)
         agora = datetime.now(ZoneInfo("America/Sao_Paulo")).strftime('%d-%m-%Y %H-%M')
@@ -462,7 +330,6 @@ def salvar_resultados(df_fornecedores, previsoes):
 
         # Exporta para Excel com múltiplas abas
         with pd.ExcelWriter(caminho_arquivo, engine='openpyxl') as writer:
-            df_fornecedores.to_excel(writer, sheet_name='Fornecedores', index=False)
             previsoes.to_excel(writer, sheet_name='Pedidos em Aberto', index=False)
 
         log_message("✅ Arquivo salvo com sucesso!")
@@ -525,13 +392,8 @@ def main():
     if previsoes is None:
         return
     
-    # Cria matriz de fornecedores
-    df_fornecedores = criar_matriz_fornecedores(previsoes, df_carga, caminhos)
-    if df_fornecedores is None:
-        return
-    
     # Salva resultados
-    if salvar_resultados(df_fornecedores, previsoes):
+    if salvar_resultados(previsoes):
         log_message("🎉 Processamento concluído com sucesso!")
     else:
         log_message("❌ Erro ao salvar resultados")

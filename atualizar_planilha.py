@@ -4,7 +4,6 @@ from glob import glob
 import os
 import re
 import xlsxwriter
-import csv
 from datetime import datetime
 
 # Caminhos fixos

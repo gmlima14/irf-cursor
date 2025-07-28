@@ -146,49 +146,30 @@ def treinar_e_salvar_modelo(df, caminho_salvamento):
     log_message("⚙️ Configurando experimento PyCaret...")
     s = setup(df, target='On Time', session_id=109, fix_imbalance=True)
 
-    # Treina os três modelos
-    log_message("Treinando modelo XGBoost...")
-    modelo_xgb = create_model('xgboost')
+    # Treina o modelo LightGBM
     log_message("Treinando modelo LightGBM...")
     modelo_lgbm = create_model('lightgbm', verbose=False)
-    log_message("Treinando modelo CatBoost...")
-    modelo_cat = create_model('catboost')
 
-    # Tunando os modelos
-    log_message("🔧 Tunando modelo XGBoost...")
-    modelo_xgb_tunado = tune_model(modelo_xgb, optimize='MCC', n_iter=5)
+    # Tunando o modelo
     log_message("🔧 Tunando modelo LightGBM...")
     modelo_lgbm_tunado = tune_model(modelo_lgbm, optimize='MCC', n_iter=5, verbose=False)
-    log_message("🔧 Tunando modelo CatBoost...")
-    modelo_cat_tunado = tune_model(modelo_cat, optimize='MCC', n_iter=5)
 
-    # Plota a importância das variáveis para cada modelo
-    plot_model(modelo_xgb_tunado, plot='feature', save=True)
+    # Plota a importância das variáveis para o modelo
     plot_model(modelo_lgbm_tunado, plot='feature', save=True)
-    plot_model(modelo_cat_tunado, plot='feature', save=True)
 
-    # Plota a matriz de confusão para cada modelo
-    plot_model(modelo_xgb_tunado, plot='confusion_matrix', save=True)
+    # Plota a matriz de confusão para o modelo
     plot_model(modelo_lgbm_tunado, plot='confusion_matrix', save=True)
-    plot_model(modelo_cat_tunado, plot='confusion_matrix', save=True)
 
-    # Finaliza os modelos tunados
-    log_message("🔧 Finalizando modelos tunados...")
-    modelo_xgb_final = finalize_model(modelo_xgb_tunado)
+    # Finaliza o modelo tunado
+    log_message("🔧 Finalizando modelo tunado...")
     modelo_lgbm_final = finalize_model(modelo_lgbm_tunado)
-    modelo_cat_final = finalize_model(modelo_cat_tunado)
 
-    # Faz o blend dos modelos
-    log_message("🤝 Fazendo blend dos modelos...")
-    modelo_blend = blend_models(estimator_list=[modelo_xgb_final, modelo_lgbm_final, modelo_cat_final], fold=5, optimize='MCC', choose_better=True, verbose=False)
-    modelo_blend_final = finalize_model(modelo_blend)
+    # Salvando o modelo
+    log_message(f"💾 Salvando modelo em: {caminho_salvamento}")
+    save_model(modelo_lgbm_final, caminho_salvamento)
 
-    # Salvando o modelo blendado
-    log_message(f"💾 Salvando modelo blendado em: {caminho_salvamento}")
-    save_model(modelo_blend_final, caminho_salvamento)
-
-    log_message("✅ Modelo blendado treinado e salvo com sucesso!")
-    return modelo_blend_final
+    log_message("✅ Modelo treinado e salvo com sucesso!")
+    return modelo_lgbm_final
 
 def main():
     """
@@ -210,7 +191,7 @@ def main():
     df.to_excel(r'S:\Procurement\FUP\IRF - Índice de Risco de Fornecedores\Modelo de Machine Learning\dados_treinamento.xlsx', index=False)
     
     # Treinar e salvar modelo
-    modelo_final = treinar_e_salvar_modelo(df, r'S:\Procurement\FUP\IRF - Índice de Risco de Fornecedores\Modelo de Machine Learning\modelo_treinado_blend_ytd')
+    modelo_final = treinar_e_salvar_modelo(df, r'S:\Procurement\FUP\IRF - Índice de Risco de Fornecedores\Modelo de Machine Learning\Modelos\modelo_treinado_lgbm')
     
     log_message("=" * 60)
 
